@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: d2f1de69cb1dddc4fb38b202ee48348d
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Star Jedi
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d95e7b35a91b9de4a81e7cbe5288f274, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

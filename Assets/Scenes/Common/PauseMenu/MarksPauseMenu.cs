@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
 public class MarksPauseMenu : MonoBehaviour
@@ -10,16 +9,40 @@ public class MarksPauseMenu : MonoBehaviour
     private bool IsGamePaused;
     [SerializeField] GameObject PauseMenuUI;
     [SerializeField] Button ResumeButton;
+    [SerializeField] GameObject GameObjectWithMarkSceneManager;
+    [SerializeField] Dropdown sceneSelectDebugDropdown;
+    [SerializeField] bool AllowPauseMenu = true;
+
+    private MarkSceneManager markSceneManager;
 
     void Start()
     {
+        markSceneManager = GameObjectWithMarkSceneManager.GetComponent<MarkSceneManager>();
+        sceneSelectDebugDropdown.onValueChanged.AddListener(delegate {
+            sceneSelectDebugDropdownValueChangedHandler(sceneSelectDebugDropdown);
+        });
         Resume(); // simulate a resume on start
+    }
+
+    void Destroy()
+    {
+        sceneSelectDebugDropdown.onValueChanged.RemoveAllListeners();
+    }
+
+    private void sceneSelectDebugDropdownValueChangedHandler(Dropdown target)
+    {
+        int sceneSelected = target.value;
+        Debug.Log("sceneSelected: " + sceneSelected);
+        markSceneManager.LoadScene(sceneSelected);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if ( !AllowPauseMenu )
+        {
+            return;
+        }
         if ( Input.GetButtonDown("Menu Button") )
         {
             Debug.Log("Menu button pressed");
@@ -55,12 +78,12 @@ public class MarksPauseMenu : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        Time.timeScale = 1f; // unfreeze the game if frozen
-        SceneManager.LoadScene(0); // main menu is at root
+        markSceneManager.LoadScene(0);
     }
 
     public void RestartScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // restart the scene
+        markSceneManager.RestartCurrentScene();
     }
+
 }

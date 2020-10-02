@@ -16,6 +16,7 @@ public class ScreenMessageControl : MonoBehaviour
         private set {
             _IsMessageShowing = value;
             MarkGameState.IsOnScreenMessageShowing = _IsMessageShowing;
+            Debug.Log("IsOnScreenMessageShowing -> " + _IsMessageShowing);
         }
     }
 

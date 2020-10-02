@@ -28,8 +28,11 @@ public class MarkDoor : MonoBehaviour
     {
         Debug.Log("Player collision a door");
         // Ask the question 
+        //if (Input.GetButtonDown("A Button")) // doesn't work
+        //{
         ScreenMessageControl.ShowMessage(OnMessageAnswer);
         //CharacterController.enabled = false; // disable the controller until question answered
+        //}
     }
 
     private void OnMessageAnswer(ScreenMessageControl.MessageAnswer messageAnswer)

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MarkDoor : MonoBehaviour
 {
+    [SerializeField] AudioSource DoorOpeningSound;
     [SerializeField] int SceneNumber;
     [SerializeField] float SecondsForDoorOpen = 5.0f;
     [SerializeField] GameObject BlackDoor;
@@ -52,6 +53,7 @@ public class MarkDoor : MonoBehaviour
     private void OpenDoor()
     {
         Animator.SetBool("open", true); //open door
+        DoorOpeningSound.Play(); // play the sound
         BlackDoor.SetActive(true);
         Debug.Log("Opening door to load next level " + SceneNumber);
         CharacterController.enabled = false;

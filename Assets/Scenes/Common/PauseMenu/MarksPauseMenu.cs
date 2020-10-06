@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using Assets.Scenes.Common.Scripts;
 
 public class MarksPauseMenu : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class MarksPauseMenu : MonoBehaviour
     [SerializeField] GameObject PauseMenuUI;
     [SerializeField] Button ResumeButton;
     [SerializeField] GameObject GameObjectWithMarkSceneManager;
+    [SerializeField] GameObject DebugOptions;
     [SerializeField] Dropdown sceneSelectDebugDropdown;
     [SerializeField] bool AllowPauseMenu = true;
 
@@ -18,13 +20,21 @@ public class MarksPauseMenu : MonoBehaviour
     void Start()
     {
         markSceneManager = GameObjectWithMarkSceneManager.GetComponent<MarkSceneManager>();
-        sceneSelectDebugDropdown.onValueChanged.AddListener(delegate {
-            sceneSelectDebugDropdownValueChangedHandler(sceneSelectDebugDropdown);
-        });
+        
+        
         Resume(); // simulate a resume on start
     }
 
-    void Destroy()
+    private void OnEnable()
+    {
+        DebugOptions.SetActive(MarkGameState.IsInDebugMode);
+        if (MarkGameState.IsInDebugMode)
+        {
+            sceneSelectDebugDropdown.onValueChanged.AddListener(delegate { sceneSelectDebugDropdownValueChangedHandler(sceneSelectDebugDropdown); });
+        }
+    }
+
+    void OnDisable()
     {
         sceneSelectDebugDropdown.onValueChanged.RemoveAllListeners();
     }
@@ -43,6 +53,7 @@ public class MarksPauseMenu : MonoBehaviour
         {
             return;
         }
+
         if ( Input.GetButtonDown("Menu Button") )
         {
             Debug.Log("Menu button pressed");
@@ -53,11 +64,22 @@ public class MarksPauseMenu : MonoBehaviour
             {
                 Pause();
             }
-        } 
-        if ( Input.GetButtonDown("B Button") && IsGamePaused)
-        {
-            Resume();
         }
+
+        if ( IsGamePaused )
+        {
+            if (Input.GetButtonDown("Y Button"))
+            {
+                MarkGameState.IsInDebugMode = !MarkGameState.IsInDebugMode; // flip the setting
+            }
+
+            if (Input.GetButtonDown("B Button"))
+            {
+                Resume();
+            }
+        }
+
+        
     }
 
     public void Resume()

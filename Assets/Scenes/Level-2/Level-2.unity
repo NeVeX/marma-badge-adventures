@@ -6386,7 +6386,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Are you sure you want to go into this world bae?
+  m_text: 'Are you sure you want to through this door bae?
 
 
     :-*'
@@ -8579,22 +8579,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorOne
       objectReference: {fileID: 0}
-    - target: {fileID: 325982525152930824, guid: b74b14b0f9247c54db9f03a0c4a20c34, type: 3}
-      propertyPath: Priority
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 325982525152930824, guid: b74b14b0f9247c54db9f03a0c4a20c34, type: 3}
-      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
-      value: 1.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 325982525152930824, guid: b74b14b0f9247c54db9f03a0c4a20c34, type: 3}
-      propertyPath: DopplerLevel
-      value: 3.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 325982525152930824, guid: b74b14b0f9247c54db9f03a0c4a20c34, type: 3}
-      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
-      value: 0.61388886
-      objectReference: {fileID: 0}
     - target: {fileID: 325982525479964423, guid: b74b14b0f9247c54db9f03a0c4a20c34, type: 3}
       propertyPath: MessagePanel
       value: 
@@ -8603,10 +8587,6 @@ PrefabInstance:
       propertyPath: GameObjectWithCharacterController
       value: 
       objectReference: {fileID: 2139781873}
-    - target: {fileID: 325982525479964423, guid: b74b14b0f9247c54db9f03a0c4a20c34, type: 3}
-      propertyPath: SceneNumber
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 326557825241450317, guid: b74b14b0f9247c54db9f03a0c4a20c34, type: 3}
       propertyPath: m_LocalPosition.x
       value: -37

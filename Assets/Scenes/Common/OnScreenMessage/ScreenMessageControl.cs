@@ -129,7 +129,7 @@ public class ScreenMessageControl : MonoBehaviour
 
     private void CharacterControllerEnable(bool enabled)
     {
-        if ( _characterController != null )
+        if ( _characterController != null && ShouldFreezeControllerWhileShowing)
         {
             _characterController.enabled = enabled;
         }

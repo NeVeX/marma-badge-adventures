@@ -20,6 +20,12 @@ public class MarkPlayerMovement : MonoBehaviour
 
     void Update()
     {
+
+        if ( !characterController.enabled )
+        {
+            return; // nothing to do
+        }
+
         isGrounded = Physics.CheckSphere(groundChecker.position, groundDistance, groundMask);
         if ( isGrounded && velocity.y < 0f)
         {

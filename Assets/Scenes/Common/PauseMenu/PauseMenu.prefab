@@ -894,7 +894,9 @@ MonoBehaviour:
   PauseMenuUI: {fileID: 967902689562592864}
   ResumeButton: {fileID: 967902690087869282}
   GameObjectWithMarkSceneManager: {fileID: 0}
+  DebugOptions: {fileID: 6662459149337795588}
   sceneSelectDebugDropdown: {fileID: 8437415340087666094}
+  AllowPauseMenu: 1
 --- !u!1 &967902690449624686
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,23 +20,23 @@ public class MarksPauseMenu : MonoBehaviour
     void Start()
     {
         markSceneManager = GameObjectWithMarkSceneManager.GetComponent<MarkSceneManager>();
-        
-        
         Resume(); // simulate a resume on start
     }
 
-    private void OnEnable()
+    void OnEnable()
     {
         DebugOptions.SetActive(MarkGameState.IsInDebugMode);
         if (MarkGameState.IsInDebugMode)
         {
             sceneSelectDebugDropdown.onValueChanged.AddListener(delegate { sceneSelectDebugDropdownValueChangedHandler(sceneSelectDebugDropdown); });
         }
+        EventSystem.current.SetSelectedGameObject(ResumeButton.gameObject); // set the resume button as the default selection
     }
 
     void OnDisable()
     {
         sceneSelectDebugDropdown.onValueChanged.RemoveAllListeners();
+        EventSystem.current.SetSelectedGameObject(null); // remove the current selected item
     }
 
     private void sceneSelectDebugDropdownValueChangedHandler(Dropdown target)
@@ -94,8 +94,6 @@ public class MarksPauseMenu : MonoBehaviour
         PauseMenuUI.SetActive(true); // set the menu to show
         Time.timeScale = 0f; // freeze the game
         IsGamePaused = true;
-        ResumeButton.gameObject.SetActive(true);
-        ResumeButton.Select();
     }
 
     public void LoadMainMenu()

@@ -165,7 +165,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8991729086186358391}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MarksPauseMenu, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
@@ -323,7 +323,6 @@ GameObject:
   - component: {fileID: 8991729086186358385}
   - component: {fileID: 8991729086186358384}
   - component: {fileID: 8991729086186358387}
-  - component: {fileID: 8991729086186358391}
   m_Layer: 5
   m_Name: LoadingMessage
   m_TagString: Untagged
@@ -411,21 +410,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &8991729086186358391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8991729086186358386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 244c09673f85f62488e46bd00137d4c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PauseMenuUI: {fileID: 8991729086986659587}
-  ResumeButton: {fileID: 8991729085423041025}
-  GameObjectWithMarkSceneManager: {fileID: 0}
 --- !u!1 &8991729086986659587
 GameObject:
   m_ObjectHideFlags: 0

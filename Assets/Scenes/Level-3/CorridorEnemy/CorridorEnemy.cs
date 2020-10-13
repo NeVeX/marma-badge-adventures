@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class CorridorEnemy : MonoBehaviour
 {
+    [SerializeField] AudioSource SoundOnEnemyActivated;
+    [SerializeField] GameObject DeactivatorsRemainingMessage;
+    [SerializeField] GameObject NoDeactivatorsRemainingMessage;
     [SerializeField] GameObject Enemy;
     [SerializeField] GameObject PositionEnd;
     [SerializeField] float Speed;
     [SerializeField] int HowManyActivationsAllowed = int.MaxValue;
-
+    
+    private int _numberOfDeActivators;
     private Vector3 _startingPosition;
     private bool _isActivated = false;
 
     void Start()
     {
         _startingPosition = Enemy.transform.position;
+        _numberOfDeActivators = transform.parent.GetComponentsInChildren<DeactivatorBarnacle>().Length;
+        Debug.Log("The number of deactivators in this area is " + _numberOfDeActivators);
         Reset();
     }
 
@@ -39,10 +45,28 @@ public class CorridorEnemy : MonoBehaviour
         if (HowManyActivationsAllowed >= 0)
         {
             _isActivated = true;
+            SoundOnEnemyActivated.Play();
             Debug.Log("Corridor Enemy activated");
         } else
         {
             Debug.Log("Corridor Enemy not activated, no more activations left");
+        }
+    }
+
+    public void DeactivateEnemy()
+    {
+        _numberOfDeActivators--;
+        // show panel
+        if (_numberOfDeActivators <= 0)
+        {
+            NoDeactivatorsRemainingMessage.GetComponent<ScreenMessageControl>().ShowMessage();
+            Debug.Log("All deactivators reached");
+            _isActivated = false;
+            Enemy.SetActive(false); // deactivate it...should destroy instead?
+            PositionEnd.SetActive(false);
+        } else
+        {
+            DeactivatorsRemainingMessage.GetComponent<ScreenMessageControl>().ShowMessage();
         }
     }
 
@@ -57,8 +81,7 @@ public class CorridorEnemy : MonoBehaviour
         _isActivated = false;
         if (HowManyActivationsAllowed <= 0)
         {
-            Enemy.SetActive(false); // deactivate it
-            PositionEnd.SetActive(false);
+            DeactivateEnemy();
         }
     }
 }

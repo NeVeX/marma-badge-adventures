@@ -8,6 +8,9 @@ TagManager:
   - Door
   - Barnacle
   - CorridorEnemy
+  - DeactivatorBarnacle
+  - EndScene
+  - ExBoyfriend
   layers:
   - Default
   - TransparentFX

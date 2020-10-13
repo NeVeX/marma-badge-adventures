@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,10 +14,17 @@ public class MarkSceneManager : MonoBehaviour
         Reset();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void StopAllAudio()
     {
-        
+        var audioSources = FindObjectsOfType<AudioSource>();
+        if (audioSources != null && audioSources.Length > 0)
+        {
+            Debug.Log("Stopping all audiosources");
+            audioSources.ToList().ForEach(aso => aso.Stop());
+        } else
+        {
+            Debug.Log("No Audiosources to stop");
+        }
     }
 
     public void LoadScene(int buildIndex)

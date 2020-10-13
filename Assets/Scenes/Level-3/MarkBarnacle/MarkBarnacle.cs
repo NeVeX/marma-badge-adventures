@@ -9,7 +9,7 @@ public class MarkBarnacle : MonoBehaviour
 
     void Start()
     {
-        _corridorEnemy = gameObject.transform.parent.GetComponentInChildren<CorridorEnemy>();
+        _corridorEnemy = gameObject.transform.parent.parent.GetComponentInChildren<CorridorEnemy>(); // Another hacky hack hackness
     }
 
     void OnPlayerColliderHit()

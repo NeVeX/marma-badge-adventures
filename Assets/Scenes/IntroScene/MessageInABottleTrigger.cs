@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scenes.Common.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -11,11 +12,13 @@ public class MessageInABottleTrigger : MonoBehaviour
     [SerializeField] AudioClip recordScratch;
     [SerializeField] AudioClip messageInABottle;
     private bool isAlreadyVisible = false;
+    private MarkSceneManager _markSceneManager;
 
     void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
         audioSource = GetComponent<AudioSource>();
+        _markSceneManager = GetComponent<MarkSceneManager>();
     }
 
     void Update()
@@ -34,8 +37,7 @@ public class MessageInABottleTrigger : MonoBehaviour
     private IEnumerator playMessageInABottle()
     {
         // Stop all other sources
-        var allAudioSources = FindObjectsOfType<AudioSource>();
-        allAudioSources.ToList().ForEach(a => a.Stop());
+        _markSceneManager.StopAllAudio();
         // now play scratch record effect
         audioSource.loop = false;
         audioSource.PlayOneShot(recordScratch);

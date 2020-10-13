@@ -15,11 +15,13 @@ public class ScreenMessageControl : MonoBehaviour
         get { return _IsMessageShowing; }
         private set {
             _IsMessageShowing = value;
-            MarkGameState.IsOnScreenMessageShowing = _IsMessageShowing;
+            //MarkGameState.IsOnScreenMessageShowing = _IsMessageShowing;
             Debug.Log("IsOnScreenMessageShowing -> " + _IsMessageShowing);
         }
     }
 
+    //[SerializeField] float SecondsToWaitUntilInteractable = 2.0f;
+    [SerializeField] AudioSource AudioToPlayOnShow;
     [SerializeField] GameObject MessagePanel;
     [SerializeField] GameObject MessagePanelAfter;
     [SerializeField] AudioSource PlayerInputYesSound;
@@ -29,24 +31,37 @@ public class ScreenMessageControl : MonoBehaviour
     [SerializeField] bool MessageShowUntilPlayerInput = true;
     [SerializeField] int MessageShowForSeconds = 5;
 
-    private AudioSource AudioSource;
-    private CharacterController _characterController;
+    private AudioSource _AudioSourceToPlayOnShow;
+    private CharacterController _characterController = null;
     private List<Action<MessageAnswer>> MessageAnswerListeners = new List<Action<MessageAnswer>>();
+    //private float _timeUntilInteractable = 0.0f;
 
     void Start()
     {
+        _AudioSourceToPlayOnShow = MessagePanel.GetComponent<AudioSource>(); // Legacy support
+        if ( AudioToPlayOnShow != null )
+        {
+            _AudioSourceToPlayOnShow = AudioToPlayOnShow;
+        }
+
+        if (CharacterControllerOnGameObject != null)
+        {
+            _characterController = CharacterControllerOnGameObject.GetComponent<CharacterController>(); // can be null
+        }
         SetMessageActive(MessagePanel, ShowOnStartup);
-        AudioSource = MessagePanel.GetComponent<AudioSource>();
-        _characterController = CharacterControllerOnGameObject.GetComponent<CharacterController>(); // can be null
-      
     }
 
     // Update is called once per frame
     void Update()
     {
+        if ( !MessageShowUntilPlayerInput)
+        {
+            return; // let the message remove itelf
+        }
         bool aButton = Input.GetButtonDown("A Button");
         bool bButton = Input.GetButtonDown("B Button");
-        if ( IsMessageShowing && (aButton || bButton) )
+        //bool isInteractable = Time.unscaledTime >= _timeUntilInteractable;
+        if (IsMessageShowing && (aButton || bButton) )
         {
             HideMessage(MessagePanel);
             if (aButton)
@@ -73,6 +88,9 @@ public class ScreenMessageControl : MonoBehaviour
             {
                 StartCoroutine(SetInactiveAfterSeconds(MessagePanel, MessageShowForSeconds));
             }
+        } else
+        {
+            Debug.Log("Can't show another message since one is already shown");
         }
     }
 
@@ -81,7 +99,10 @@ public class ScreenMessageControl : MonoBehaviour
         switch (messageAnswer)
         {
             case MessageAnswer.Yes:
-                PlayerInputYesSound.Play();
+                if (PlayerInputYesSound != null)
+                {
+                    PlayerInputYesSound.Play();
+                }
                 break;
             case MessageAnswer.No:
                 // nothing right now...
@@ -101,9 +122,9 @@ public class ScreenMessageControl : MonoBehaviour
     private void ShowMessage(GameObject panel)
     {
         SetMessageActive(panel, true);
-        if (AudioSource != null)
+        if (_AudioSourceToPlayOnShow != null)
         {
-            AudioSource.Play();
+            _AudioSourceToPlayOnShow.Play();
         }
     }
 
@@ -123,6 +144,7 @@ public class ScreenMessageControl : MonoBehaviour
     private void SetMessageActive(GameObject panel, bool isActive)
     {
         IsMessageShowing = isActive;
+        //_timeUntilInteractable = Time.unscaledTime + SecondsToWaitUntilInteractable;
         panel.SetActive(IsMessageShowing);
         CharacterControllerEnable(!isActive);
     }

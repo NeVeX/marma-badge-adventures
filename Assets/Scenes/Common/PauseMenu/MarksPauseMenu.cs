@@ -36,7 +36,10 @@ public class MarksPauseMenu : MonoBehaviour
     void OnDisable()
     {
         sceneSelectDebugDropdown.onValueChanged.RemoveAllListeners();
-        EventSystem.current.SetSelectedGameObject(null); // remove the current selected item
+        if (EventSystem.current != null)
+        {
+            EventSystem.current.SetSelectedGameObject(null); // remove the current selected item
+        }
     }
 
     private void sceneSelectDebugDropdownValueChangedHandler(Dropdown target)

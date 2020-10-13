@@ -6,6 +6,7 @@ public class MarkPlayerCollision : MonoBehaviour
 {
     // capture you died screen and reset 
     [SerializeField] GameObject DeathMenu;
+    private enum CollisionType { CharacterController, RigidBody }
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
@@ -14,8 +15,8 @@ public class MarkPlayerCollision : MonoBehaviour
         {
             return;
         }
-        Debug.Log("Player collided with something via OnControllerColliderHit - " + gameObjectTag);
-        OnPlayerHit(gameObjectTag);
+        //Debug.Log("Player collided with something via OnControllerColliderHit - " + gameObjectTag);
+        OnPlayerHit(gameObjectTag, CollisionType.CharacterController);
         hit.transform.SendMessage("OnPlayerColliderHit", SendMessageOptions.DontRequireReceiver);
         
     }
@@ -28,15 +29,18 @@ public class MarkPlayerCollision : MonoBehaviour
             return;
         }
         Debug.Log("Player collided with something via OnTriggerEnter - " + gameObjectTag);
-        OnPlayerHit(gameObjectTag);
+        OnPlayerHit(gameObjectTag, CollisionType.RigidBody);
     }
 
-    private void OnPlayerHit(string tag)
+    private void OnPlayerHit(string tag, CollisionType collisionType)
     {
         switch (tag)
         {
             case "CorridorEnemy":
-                OnCorridorEnemyHit();
+                if (collisionType == CollisionType.RigidBody)
+                {
+                    OnCorridorEnemyHit(); // only take damage from "things" hitting the player
+                }
                 break;
         }
     }

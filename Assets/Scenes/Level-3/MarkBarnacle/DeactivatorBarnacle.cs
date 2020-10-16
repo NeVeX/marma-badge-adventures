@@ -7,7 +7,7 @@ public class DeactivatorBarnacle : MonoBehaviour
 {
     [SerializeField] float PlayerWithinRadius = 3.0f;
     [SerializeField] float PlayerLookAtOffsetTolerance = 0.85f;
-    [SerializeField] float FadingDurationSeconds = 2.0f;
+    [SerializeField] float FadingDurationSeconds = 2.8f;
     private MeshRenderer _renderer;
     private Color _originalColor;
     private Color _fadedColor;
@@ -55,14 +55,14 @@ public class DeactivatorBarnacle : MonoBehaviour
     {
         Vector3 dir = (_player.transform.position - transform.position).normalized;
         float dot = Vector3.Dot(dir, transform.forward);
-        //Debug.Log("Player offset looking at barnacle " + dot);
+        Debug.Log("Player offset looking at barnacle " + dot);
         return dot >= PlayerLookAtOffsetTolerance;
     }
 
     private bool IsPlayerWithinDistance()
     {
         float distance = Vector3.Distance(_player.transform.position, transform.position);
-        //Debug.Log("Distance to player from barnacle is " + distance);
+        Debug.Log("Distance to player from barnacle is " + distance);
         return distance <= PlayerWithinRadius;
     }
 

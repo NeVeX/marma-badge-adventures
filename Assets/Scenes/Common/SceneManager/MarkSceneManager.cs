@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class MarkSceneManager : MonoBehaviour
 {
     [SerializeField] GameObject LoadingScreenPanel;
+    [HideInInspector] public bool IsSceneCompleted = false;
 
     // Start is called before the first frame update
     void Start()

@@ -11,6 +11,8 @@ TagManager:
   - DeactivatorBarnacle
   - EndScene
   - ExBoyfriend
+  - DamageObject
+  - Spawner
   layers:
   - Default
   - TransparentFX

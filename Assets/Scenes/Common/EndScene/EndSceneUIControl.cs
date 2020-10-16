@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Assertions;
 using UnityEngine.EventSystems;
 
 public class EndSceneUIControl : MonoBehaviour
@@ -13,18 +14,19 @@ public class EndSceneUIControl : MonoBehaviour
     [SerializeField] AudioSource AudioToPlayOnActivation;
     [SerializeField] GameObject[] GameObjectsToDeactivate;
     [SerializeField] MarkRelic Relic;
-
-    private MarkSceneManager markSceneManager;
+    [SerializeField] MarkSceneManager MarkSceneManager;
     private float _timeUntilInputAcceptance = 0.0f;
 
     void Start()
     {
-        markSceneManager = FindObjectOfType<MarkSceneManager>();
+        Assert.IsNotNull(MarkSceneManager);
     }
 
     void OnEnable()
     {
+        MarkSceneManager.IsSceneCompleted = true;
         MarkGameState.AddCollectedRelic(Relic);
+        MarkSceneManager.StopAllAudio();
         Time.timeScale = 0f;
         _timeUntilInputAcceptance = Time.unscaledTime + SecondsDelayUntilInputAcceptance; // add a delay
         EventSystem.current.SetSelectedGameObject(ButtonToFocus);
@@ -58,7 +60,7 @@ public class EndSceneUIControl : MonoBehaviour
         if (Time.unscaledTime > _timeUntilInputAcceptance) // if we allow input after a delay 
         {
             HideMenu();
-            markSceneManager.LoadScene(NextSceneToLoad);
+            MarkSceneManager.LoadScene(NextSceneToLoad);
         }
     }
 }

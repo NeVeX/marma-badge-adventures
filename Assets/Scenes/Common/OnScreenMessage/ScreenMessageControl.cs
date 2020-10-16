@@ -20,7 +20,7 @@ public class ScreenMessageControl : MonoBehaviour
         }
     }
 
-    //[SerializeField] float SecondsToWaitUntilInteractable = 2.0f;
+    [SerializeField] float SecondsToWaitUntilInteractable = 0.5f;
     [SerializeField] AudioSource AudioToPlayOnShow;
     [SerializeField] GameObject MessagePanel;
     [SerializeField] GameObject MessagePanelAfter;
@@ -34,7 +34,7 @@ public class ScreenMessageControl : MonoBehaviour
     private AudioSource _AudioSourceToPlayOnShow;
     private CharacterController _characterController = null;
     private List<Action<MessageAnswer>> MessageAnswerListeners = new List<Action<MessageAnswer>>();
-    //private float _timeUntilInteractable = 0.0f;
+    private float _timeUntilInteractable = 0.0f;
 
     void Start()
     {
@@ -60,9 +60,10 @@ public class ScreenMessageControl : MonoBehaviour
         }
         bool aButton = Input.GetButtonDown("A Button");
         bool bButton = Input.GetButtonDown("B Button");
-        //bool isInteractable = Time.unscaledTime >= _timeUntilInteractable;
-        if (IsMessageShowing && (aButton || bButton) )
+        bool isInteractable = Time.unscaledTime > _timeUntilInteractable;
+        if (isInteractable && IsMessageShowing && (aButton || bButton) )
         {
+            Debug.Log("Button pressed while message shown: A Button: " + aButton + "; B Button: " + bButton);
             HideMessage(MessagePanel);
             if (aButton)
             {
@@ -133,7 +134,7 @@ public class ScreenMessageControl : MonoBehaviour
         SetMessageActive(panel, false);
         if ( MessagePanelAfter != null )
         {
-            Debug.Log("Showing MessagePanelAfter hiding this panel");
+            Debug.Log("Showing MessagePanelAfter after hiding this panel");
             MessagePanelAfter.transform.parent.GetComponent<ScreenMessageControl>().ShowMessage();
         } else
         {
@@ -144,7 +145,7 @@ public class ScreenMessageControl : MonoBehaviour
     private void SetMessageActive(GameObject panel, bool isActive)
     {
         IsMessageShowing = isActive;
-        //_timeUntilInteractable = Time.unscaledTime + SecondsToWaitUntilInteractable;
+        _timeUntilInteractable = Time.unscaledTime + SecondsToWaitUntilInteractable;
         panel.SetActive(IsMessageShowing);
         CharacterControllerEnable(!isActive);
     }

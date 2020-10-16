@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DayAndNight : MonoBehaviour
 {
-    private Light light;
+    private Light _light;
     private float dayIntensity;
     private float nightIntensity;
     [SerializeField] float dayLengthInSeconds;
@@ -15,8 +15,8 @@ public class DayAndNight : MonoBehaviour
     void Start()
     {
         // We assume it starts at day time
-        this.light = GetComponent<Light>();
-        this.dayIntensity = this.light.intensity;
+        this._light = GetComponent<Light>();
+        this.dayIntensity = this._light.intensity;
         this.nightIntensity = 0.0f;
         this.changeIntensity = 0.0f;
         this.startIntensity = this.dayIntensity;
@@ -27,7 +27,7 @@ public class DayAndNight : MonoBehaviour
     void Update()
     {
         changeIntensity += Time.deltaTime / dayLengthInSeconds;
-        light.intensity = Mathf.Lerp(startIntensity, endIntensity, changeIntensity);
+        _light.intensity = Mathf.Lerp(startIntensity, endIntensity, changeIntensity);
         if ( changeIntensity >= 1.0f)
         {
             //swap the values and restart (going the other way)

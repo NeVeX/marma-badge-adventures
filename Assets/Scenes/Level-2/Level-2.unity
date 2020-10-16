@@ -904,6 +904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4a23e3aa11bd1240b59fd1af0a03fbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SecondsToWaitUntilInteractable: 0.5
   AudioToPlayOnShow: {fileID: 0}
   MessagePanel: {fileID: 1967048359}
   MessagePanelAfter: {fileID: 0}
@@ -5840,6 +5841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4a23e3aa11bd1240b59fd1af0a03fbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SecondsToWaitUntilInteractable: 0.5
   AudioToPlayOnShow: {fileID: 0}
   MessagePanel: {fileID: 1229515551}
   MessagePanelAfter: {fileID: 0}
@@ -8727,6 +8729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4a23e3aa11bd1240b59fd1af0a03fbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SecondsToWaitUntilInteractable: 0.5
   AudioToPlayOnShow: {fileID: 0}
   MessagePanel: {fileID: 2638593110023549802}
   MessagePanelAfter: {fileID: 1229515551}
@@ -9160,7 +9163,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 94c44a53adf36224689046f48967270b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5993e449a3e98694db5cf3b9052b4a4f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

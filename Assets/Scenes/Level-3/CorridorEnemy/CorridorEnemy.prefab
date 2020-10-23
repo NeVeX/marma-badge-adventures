@@ -256,6 +256,7 @@ GameObject:
   - component: {fileID: 5917009826201991463}
   - component: {fileID: 1992881515}
   - component: {fileID: 1992881514}
+  - component: {fileID: 2822121496281074160}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: CorridorEnemy
@@ -356,6 +357,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.6, z: 1}
   m_Center: {x: 0, y: 0.1, z: 0}
+--- !u!114 &2822121496281074160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5917009826201991458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e3f69b810896414e95feef040b8c02b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageAmount: 1000000
+  IsInstantKill: 1
+  IsEnemy: 0
 --- !u!1001 &5917009825897982784
 PrefabInstance:
   m_ObjectHideFlags: 0

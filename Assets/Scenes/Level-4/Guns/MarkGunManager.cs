@@ -5,20 +5,23 @@ using UnityEngine;
 
 public class MarkGunManager : MonoBehaviour
 {
+    [SerializeField] MarkRandomAudioPlayer WeaponPickupPlayer;
     [SerializeField] GameObject[] Guns;
 
-    public void ActivateGun(string gunTagName)
+    public void ActivateGun(string name)
     {
+        Debug.Log("Attempting to activate the gun with name: " + name);
         if ( Guns == null )
         {
             return;
         }
 
         // find the one we need to actiavte if we can
-        GameObject gunToActivate = Guns.ToList().First(g => g.CompareTag(gunTagName));
+        GameObject gunToActivate = Guns.ToList().FirstOrDefault(g => g.name.Equals(name));
         if ( gunToActivate == null )
         {
-            Debug.Log("There's no gun with tag name " + gunTagName + " to activate");
+            Debug.Log("There's no gun with name " + name + " to activate");
+            return;
         }
 
         // deactivate all
@@ -26,5 +29,6 @@ public class MarkGunManager : MonoBehaviour
 
         // activate the one found
         gunToActivate.SetActive(true);
+        WeaponPickupPlayer.PlayRandomIfAllowed();
     }
 }

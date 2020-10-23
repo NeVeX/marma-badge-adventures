@@ -36,7 +36,7 @@ public class EndSceneUIControl : MonoBehaviour
         }
         if ( GameObjectsToDeactivate != null )
         {
-            GameObjectsToDeactivate.ToList().ForEach(go => go.SetActive(false)); // deactivate each one
+            GameObjectsToDeactivate.ToList().FindAll(go => go != null).ForEach(go => go.SetActive(false)); // deactivate each one
         }
     }
 

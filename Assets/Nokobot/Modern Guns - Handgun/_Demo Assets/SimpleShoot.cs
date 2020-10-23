@@ -10,9 +10,11 @@ public class SimpleShoot : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject casingPrefab;
     public GameObject muzzleFlashPrefab;
+    public string AnimatorFireName = "Fire";
 
     [Header("Location Refrences")]
     [SerializeField] private Animator gunAnimator;
+    [SerializeField] private Animation gunAnimation; // legacy
     [SerializeField] private Transform barrelLocation;
     [SerializeField] private Transform casingExitLocation;
 
@@ -44,17 +46,30 @@ public class SimpleShoot : MonoBehaviour
 
     void Update()
     {
-        //If you want a different input, change it here
-        if (Time.unscaledTime > _nextTimeAllowedToFire && Input.GetAxis("Right Trigger") == 1.0f) // fully pressed
+        bool isAllowedToFire = Time.unscaledTime > _nextTimeAllowedToFire;
+        bool isFireTriggerHeld = Input.GetAxis("Right Trigger") == 1.0f; // fully pressed
+        if (isAllowedToFire && isFireTriggerHeld) 
          {
-            //Calls animation on the gun that has the relevant animation events that will fire
-            gunAnimator.SetTrigger("Fire");
+            if (gunAnimation != null)
+            {
+                gunAnimation.Play();
+            }
+            else
+            {
+                gunAnimator.SetTrigger(AnimatorFireName);
+            }
+
             if (GunShotAudio != null )
             {
                 GunShotAudio.Play();
             }
             _nextTimeAllowedToFire = (1.0f / ShotsPerSecond) + Time.unscaledTime;
-        }
+        } 
+        //else
+        //{
+        //    Debug.Log("Stopping gun animation");
+        //    gunAnimator.StopPlayback();
+        //}
     }
 
     //This function creates the bullet behavior
@@ -77,10 +92,11 @@ public class SimpleShoot : MonoBehaviour
         // Get the crosshair ray
         // Create a bullet and add force on it in direction of the barrel in the direction of the crosshair
         Vector3 aimLookat = getCrossHairTargetLookAt();
-
-        GameObject bullet = Instantiate(bulletPrefab, barrelLocation.position, barrelLocation.rotation);
         barrelLocation.transform.LookAt(aimLookat); // look at the target (crosshair) and shoot towards that direction
+        GameObject bullet = Instantiate(bulletPrefab, barrelLocation.position, barrelLocation.rotation);
         Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
+        //bullet.transform.LookAt(aimLookat);
+        //bulletRb.transform.LookAt(aimLookat);
         bulletRb.AddForce(barrelLocation.forward * shotPower);
         Destroy(bullet, destroyTimeSecondsBullet); // destroy after a few seconds
     }
@@ -91,10 +107,12 @@ public class SimpleShoot : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(crossHairRay, out hit))
         {
+            Debug.Log("Hit something with raycast. Distance: "+hit.distance + ", Name: "+hit.collider.gameObject.tag);
             return hit.point; // We hit something, aim at that
         }
         else
         {
+            Debug.Log("Did not hit anything with raycast");
             return crossHairRay.GetPoint(100f); // pick a distance to aim at
         }
 

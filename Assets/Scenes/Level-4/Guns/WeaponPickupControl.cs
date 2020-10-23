@@ -6,6 +6,7 @@ using UnityEngine.Assertions;
 public class WeaponPickupControl : MonoBehaviour
 {
     [SerializeField] float Speed = 10.0f;
+    [SerializeField] GameObject WeaponGameobject;
     [SerializeField] MarkGunManager MarkGunManager;
     [SerializeField] SpawnManager SpawnManager;
 
@@ -30,7 +31,7 @@ public class WeaponPickupControl : MonoBehaviour
 
     private void OnPlayerHit()
     {
-        MarkGunManager.ActivateGun(gameObject.tag);
+        MarkGunManager.ActivateGun(WeaponGameobject.name);
         SpawnManager.ActivateSpawners();
         Destroy(gameObject);
     }

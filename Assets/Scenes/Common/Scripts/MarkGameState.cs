@@ -7,7 +7,7 @@ namespace Assets.Scenes.Common.Scripts
 {
     public enum MarkRelic
     {
-        PolaroidCamera
+        PolaroidCamera, GoldenHeart
     }
 
     public static class MarkGameState

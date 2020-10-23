@@ -4,10 +4,22 @@ using UnityEngine;
 
 public class MarkDamageObject : MonoBehaviour
 {
-    [SerializeField] float Damage;
+    public float DamageAmount;
+    public bool IsInstantKill = false;
+    public bool IsEnemy = false;
 
-    public float GetDamageAmount()
-    {
-        return Damage;
-    }
+    //public float GetDamageAmount()
+    //{
+    //    return Damage;
+    //}
+
+    //public bool IsAnInstantKill()
+    //{
+    //    return IsInstantKill;
+    //}
+
+    //public bool GetIsTheEnemy()
+    //{
+    //    return IsEnemy;
+    //}
 }

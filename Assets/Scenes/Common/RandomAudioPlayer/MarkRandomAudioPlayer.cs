@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class MarkRandomAudioPlayer : MonoBehaviour
 {
-    [SerializeField] float EveryHowManySeconds = 45f;
+    //[SerializeField] float EveryHowManySeconds = 45f;
     [SerializeField] float MinimumBetweenPlaySeconds = 15f;
     [SerializeField] AudioClip[] AudioClips;
     [SerializeField] AudioSource RandomAudioSource;
@@ -28,14 +28,21 @@ public class MarkRandomAudioPlayer : MonoBehaviour
     {
         if (AudioClips == null || AudioClips.Length == 0) { return; }
         if (IsManualControlled) { return; }
-        if (!RandomAudioSource.isPlaying && Time.unscaledTime > _timeTillNextRandom && !_markSceneManager.IsSceneCompleted)
-        {
-            float soundLength = PlayRandom();
-            SetNextRandomPlayTime(soundLength);
-        }
+        PlayRandomIfAllowed();
     }
 
-    public float PlayRandom()
+    public float PlayRandomIfAllowed()
+    {
+        if (!RandomAudioSource.isPlaying && Time.unscaledTime > _timeTillNextRandom && !_markSceneManager.IsSceneCompleted)
+        {
+            float soundLength = PlayRandomNow();
+            SetNextRandomPlayTime(soundLength);
+            return soundLength;
+        }
+        return 0.0f;
+    }
+
+    public float PlayRandomNow()
     {
         RandomAudioSource.clip = AudioClips[Random.Range(0, AudioClips.Length)];
         RandomAudioSource.Play();
@@ -50,8 +57,8 @@ public class MarkRandomAudioPlayer : MonoBehaviour
 
     private void SetNextRandomPlayTime(float soundLength)
     {
-        float minSoundLength = Mathf.Max(MinimumBetweenPlaySeconds, soundLength);
-        _timeTillNextRandom = Time.unscaledTime + minSoundLength + Random.Range(0, EveryHowManySeconds);
+        // float minSoundLength = Mathf.Max(MinimumBetweenPlaySeconds, soundLength);
+        _timeTillNextRandom = Time.unscaledTime + soundLength + MinimumBetweenPlaySeconds;
     }
 
 }

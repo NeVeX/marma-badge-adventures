@@ -47,6 +47,11 @@ public class Spawner : MonoBehaviour
 	// End of Enemy Prefabs
 	//----------------------------------
 
+
+	[SerializeField] bool RandomizeHeight;
+	[SerializeField] float RandomizeHeightMin;
+	[SerializeField] float RandomizeHeightMax;
+
 	//----------------------------------
 	// Enemies and how many have been created and how many are to be created
 	//----------------------------------
@@ -75,6 +80,7 @@ public class Spawner : MonoBehaviour
 	private int numWaves = 0;
 
 	private Action _OnCompleted;
+	private bool _hasSpawned = false;
 	private bool _alreadyCompleted = false;
 
 	//----------------------------------
@@ -162,15 +168,23 @@ public class Spawner : MonoBehaviour
 				// checks if the number of waves is bigger than the total waves
 				if (numWaves <= totalWaves)
 				{
+					if ( numWaves == 0)
+                    {
+						spawnEnemy();
+						numWaves++; // hack time
+                    }
 					// Increases the timer to allow the timed waves to work
-					timeTillWave += Time.deltaTime;
-					if (waveSpawn)
+					if (numEnemy == 0)
+					{
+						timeTillWave += Time.deltaTime;
+					}
+					if (waveSpawn && numEnemy == 0)
 					{
 						//spawns an enemy
 						spawnEnemy();
 					}
 					// checks if the time is equal to the time required for a new wave
-					if (timeTillWave >= waveTimer)
+					if (timeTillWave >= waveTimer && numEnemy == 0)
 					{
 						// enables the wave spawner
 						waveSpawn = true;
@@ -179,9 +193,9 @@ public class Spawner : MonoBehaviour
 						// increases the number of waves
 						numWaves++;
 						// A hack to get it to spawn the same number of enemies regardless of how many have been killed
-						numEnemy = 0;
+						//numEnemy = 0;
 					}
-					if (numEnemy >= totalEnemy)
+					if (numEnemy >= totalEnemy )
 					{
 						// diables the wave spawner
 						waveSpawn = false;
@@ -196,29 +210,38 @@ public class Spawner : MonoBehaviour
 		checkIfCompleted();
 	}
 
+	public bool IsCompleted()
+    {
+		return _alreadyCompleted && _hasSpawned;
+	}
+
 	private void checkIfCompleted()
     {
 		//Debug.Log("_alreadyCompleted: " + _alreadyCompleted + ", Spawn: " + Spawn + ", waveSpawn:" + waveSpawn + ", numEnemy:" + numEnemy);
 		if ( !_alreadyCompleted && !Spawn && numEnemy == 0)
         {
-			Debug.Log("Spawner ["+SpawnID+"] is complete - no more waves, spawning and all enemies dead");
+			//Debug.Log("Spawner ["+SpawnID+"] is complete - no more waves, spawning and all enemies dead");
 			_alreadyCompleted = true;
-			if ( _OnCompleted != null)
-            {
-				_OnCompleted();
-            }
+            _OnCompleted?.Invoke();
         } 
     }
 
 	// spawns an enemy based on the enemy level that you selected
 	private void spawnEnemy()
 	{
-		GameObject Enemy = (GameObject)Instantiate(Enemies[enemyLevel], gameObject.transform.position, Quaternion.identity);
+		Vector3 enemyPosition = gameObject.transform.position;
+		if (RandomizeHeight)
+        {
+			enemyPosition.y = UnityEngine.Random.Range(RandomizeHeightMin, RandomizeHeightMax);
+        }
+		GameObject Enemy = (GameObject)Instantiate(Enemies[enemyLevel], enemyPosition, Quaternion.identity);
+		Enemy.transform.parent = transform;
 		Enemy.SetActive(true);
 		Enemy.SendMessage("setName", SpawnID);
 		// Increase the total number of enemies spawned and the number of spawned enemies
 		numEnemy++;
 		spawnedEnemy++;
+		_hasSpawned = true;
 	}
 	// Call this function from the enemy when it "dies" to remove an enemy count
 	public void killEnemy(int sID)
@@ -245,8 +268,14 @@ public class Spawner : MonoBehaviour
 			Spawn = false;
 		}
 	}
-	// returns the Time Till the Next Wave, for a interface, ect.
-	public float TimeTillWave
+
+    public void DisableSpawner()
+    {
+		Spawn = false;
+    }
+
+    // returns the Time Till the Next Wave, for a interface, ect.
+    public float TimeTillWave
 	{
 		get
 		{

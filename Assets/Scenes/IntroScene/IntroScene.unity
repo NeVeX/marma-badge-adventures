@@ -326,6 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172a5826a88a395448a11c3114f8d8bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WaitSecondsUntilInputAllowed: 25
   GameObjectWithMarkSceneManager: {fileID: 658230521}
 --- !u!1 &1122066740
 GameObject:

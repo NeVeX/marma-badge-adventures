@@ -9,6 +9,7 @@ public class WeaponPickupControl : MonoBehaviour
     [SerializeField] GameObject WeaponGameobject;
     [SerializeField] MarkGunManager MarkGunManager;
     [SerializeField] SpawnManager SpawnManager;
+    [SerializeField] AudioSource AudioToPlayOnPickup;
 
     private void Start()
     {
@@ -33,6 +34,10 @@ public class WeaponPickupControl : MonoBehaviour
     {
         MarkGunManager.ActivateGun(WeaponGameobject.name);
         SpawnManager.ActivateSpawners();
+        if (AudioToPlayOnPickup != null)
+        {
+            AudioToPlayOnPickup.Play();
+        }
         Destroy(gameObject);
     }
 }

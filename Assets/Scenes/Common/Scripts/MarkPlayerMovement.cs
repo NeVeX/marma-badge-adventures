@@ -7,6 +7,7 @@ using UnityEngine;
 public class MarkPlayerMovement : MonoBehaviour
 {
     [SerializeField] AudioSource PlayerFootsteps;
+    [SerializeField] AudioSource JumpSound;
     [SerializeField] CharacterController characterController;
     [SerializeField] float moveSpeed = 12f;
     [SerializeField] float jumpHeight = 3f;
@@ -53,6 +54,10 @@ public class MarkPlayerMovement : MonoBehaviour
             //Debug.Log("Jumping");
             velocity.y = Mathf.Sqrt(jumpHeight * -2.0f * gravity); // jump formula/physics
             StopFootsteps();
+            if ( JumpSound != null && !JumpSound.isPlaying)
+            {
+                JumpSound.Play();
+            }
         }
 
         velocity.y += gravity * Time.deltaTime;

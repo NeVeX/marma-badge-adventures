@@ -18,7 +18,7 @@ public class SpawnManager : MonoBehaviour
     {
         _spawners = GetComponentsInChildren<Spawner>();
         _spawnersLength = _spawners.Length;
-        Assert.IsTrue(_spawners != null && _spawners.Length > 0);
+        //Assert.IsTrue(_spawners != null && _spawners.Length > 0);
         Debug.Log(gameObject.name + ": Amount of spawners is in this wave is " + _spawners.Length);
     }
 
@@ -70,6 +70,7 @@ public class SpawnManager : MonoBehaviour
     private void OnSpawnerCompleted()
     {
         _spawnersCompleted++;
+        Debug.Log("Spawner completed. Spawners left to complete: " + (_spawnersLength - _spawnersCompleted));
         if ( _spawnersCompleted >= _spawnersLength)
         {
             OnAllSpawnersCompleted();

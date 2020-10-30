@@ -14,6 +14,31 @@ namespace Assets.Scenes.Common.Scripts
     {
         private static HashSet<MarkRelic> _relicsCollected = new HashSet<MarkRelic>();
         public static bool IsInDebugMode = true;
+        public static int PreviousSceneLoaded = 0;
+
+        private static Dictionary<int, bool> startupSceneMessages = new Dictionary<int, bool>();
+
+        public static void AddStartupMessageShownForScene(int sceneIndex)
+        {
+            if (startupSceneMessages.ContainsKey(sceneIndex))
+            {
+                startupSceneMessages[sceneIndex] = true;
+            } else
+            {
+                startupSceneMessages.Add(sceneIndex, true);
+            }
+        }
+
+        public static bool HasShownStartupMessageForScene(int sceneIndex)
+        {
+            if ( startupSceneMessages.ContainsKey(sceneIndex))
+            {
+                return startupSceneMessages[sceneIndex];
+            } else
+            {
+                return false;
+            }
+        }
 
         public static void AddCollectedRelic(MarkRelic relic)
         {

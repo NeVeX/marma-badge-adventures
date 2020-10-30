@@ -1351,7 +1351,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4967183720592907228}
   serializedVersion: 2
-  m_Mass: 10
+  m_Mass: 20
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -1376,8 +1376,9 @@ MonoBehaviour:
   RandomAudioDeadPlayer: {fileID: 6864700518823527427}
   RandomAudioYellPlayer: {fileID: 3994244910125680945}
   MarkExplosion: {fileID: 3451213747607439489}
-  MinMoveSpeed: 1.7
-  MaxMoveSpeed: 3.2
+  IsStationary: 0
+  MinMoveSpeed: 2.3
+  MaxMoveSpeed: 3.6
   Health: 40
 --- !u!136 &4967183720592907225
 CapsuleCollider:

@@ -28,7 +28,7 @@ public class HealthBarControl : MonoBehaviour
     {
         float newWidth = _healthBarMax / (_maxHealth / health);
         HealthBar.sizeDelta = new Vector2(newWidth, HealthBar.sizeDelta.y);
-        Debug.Log("Health bar update. HealthBarMax: " + _healthBarMax + ", maxHealth: " + _maxHealth + ", newHealth: " + newWidth);
+        //Debug.Log("Health bar update. HealthBarMax: " + _healthBarMax + ", maxHealth: " + _maxHealth + ", newHealth: " + newWidth);
     }
 
 }

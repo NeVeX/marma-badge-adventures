@@ -8,18 +8,5 @@ public class MarkDamageObject : MonoBehaviour
     public bool IsInstantKill = false;
     public bool IsEnemy = false;
 
-    //public float GetDamageAmount()
-    //{
-    //    return Damage;
-    //}
-
-    //public bool IsAnInstantKill()
-    //{
-    //    return IsInstantKill;
-    //}
-
-    //public bool GetIsTheEnemy()
-    //{
-    //    return IsEnemy;
-    //}
+    //public bool CanHurtPlayer = true;
 }

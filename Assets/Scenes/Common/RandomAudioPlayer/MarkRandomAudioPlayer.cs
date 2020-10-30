@@ -20,7 +20,10 @@ public class MarkRandomAudioPlayer : MonoBehaviour
     {
         _markSceneManager = Object.FindObjectOfType<MarkSceneManager>();
         Assert.IsNotNull(_markSceneManager);
-        RandomAudioSource = gameObject.GetComponent<AudioSource>();
+        if (RandomAudioSource == null)
+        {
+            RandomAudioSource = gameObject.GetComponent<AudioSource>();
+        }
     }
 
     // Update is called once per frame

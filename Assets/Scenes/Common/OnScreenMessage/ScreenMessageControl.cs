@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 
 public class ScreenMessageControl : MonoBehaviour
@@ -36,10 +37,10 @@ public class ScreenMessageControl : MonoBehaviour
     private List<Action<MessageAnswer>> MessageAnswerListeners = new List<Action<MessageAnswer>>();
     private float _timeUntilInteractable = 0.0f;
 
-    void Start()
+    private void Awake()
     {
         _AudioSourceToPlayOnShow = MessagePanel.GetComponent<AudioSource>(); // Legacy support
-        if ( AudioToPlayOnShow != null )
+        if (AudioToPlayOnShow != null)
         {
             _AudioSourceToPlayOnShow = AudioToPlayOnShow;
         }
@@ -48,12 +49,23 @@ public class ScreenMessageControl : MonoBehaviour
         {
             _characterController = CharacterControllerOnGameObject.GetComponent<CharacterController>(); // can be null
         }
-        SetMessageActive(MessagePanel, ShowOnStartup);
+    }
+
+    void Start()
+    {
+        if ( ShowOnStartup )
+        {
+            ShowMessage(MessagePanel);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if ( !IsMessageShowing )
+        {
+            return;
+        }
         if ( !MessageShowUntilPlayerInput)
         {
             return; // let the message remove itelf
@@ -61,7 +73,7 @@ public class ScreenMessageControl : MonoBehaviour
         bool aButton = Input.GetButtonDown("A Button");
         bool bButton = Input.GetButtonDown("B Button");
         bool isInteractable = Time.unscaledTime > _timeUntilInteractable;
-        if (isInteractable && IsMessageShowing && (aButton || bButton) )
+        if (isInteractable && (aButton || bButton) )
         {
             Debug.Log("Button pressed while message shown: A Button: " + aButton + "; B Button: " + bButton);
             HideMessage(MessagePanel);

@@ -13,6 +13,7 @@ TagManager:
   - ExBoyfriend
   - DamageObject
   - Spawner
+  - Projectile
   layers:
   - Default
   - TransparentFX

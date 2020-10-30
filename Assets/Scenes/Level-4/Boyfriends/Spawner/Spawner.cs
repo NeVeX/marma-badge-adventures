@@ -222,7 +222,10 @@ public class Spawner : MonoBehaviour
         {
 			//Debug.Log("Spawner ["+SpawnID+"] is complete - no more waves, spawning and all enemies dead");
 			_alreadyCompleted = true;
-            _OnCompleted?.Invoke();
+			if (_OnCompleted != null)
+			{
+				_OnCompleted.Invoke();
+			}
         } 
     }
 
@@ -250,6 +253,7 @@ public class Spawner : MonoBehaviour
 		if (SpawnID == sID)
 		{
 			numEnemy--;
+			Debug.Log("Spawner enemy killed. Number: " + numEnemy + ", Total: " + totalEnemy);
 		}
 	}
 	//enable the spawner based on spawnerID

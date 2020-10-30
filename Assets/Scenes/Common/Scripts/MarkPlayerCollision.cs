@@ -6,19 +6,19 @@ public class MarkPlayerCollision : MonoBehaviour
 {
     [SerializeField] float PlayerHealth = 100f;
     [SerializeField] float SecondsBetweenEnenmyHitHurt = 1.5f;
-    //[SerializeField] float ConsecutiveSecondsUntilOnStayAllowed = 1.5f; //every so second
     [SerializeField] GameObject HurtOverlayPanel;
     [SerializeField] MarkRandomAudioPlayer EnemyKilledAudioPlayer;
     [SerializeField] MarkRandomAudioPlayer PlayerHurtAudioPlayer;
     [SerializeField] MarkRandomAudioPlayer PlayerHealthPickupAudioPlayer;
     [SerializeField] GameObject DeathMenu;
 
+
+    private MarkProjectileManager _markProjectileManager;
     private float _nextTimeEnemyHitHurtAllowed = -1.0f;
-    //private float _nextOnStayTriggerAllowed = -1.0f;
-    //private float _nextOnStayCollisionAllowed = -1.0f;
 
     private void Start()
     {
+        _markProjectileManager = FindObjectOfType<MarkProjectileManager>();
         if (HurtOverlayPanel != null)
         {
             HurtOverlayPanel.SetActive(false);
@@ -74,47 +74,28 @@ public class MarkPlayerCollision : MonoBehaviour
         }
     }
 
-    // These ON-STAY methods don't work; what the fuck unity - it half works, sometimes
-
-
-    //private void OnTriggerStay(Collider other)
-    //{
-    //    Debug.Log("Player collided with something via OnTriggerStay - " + other.gameObject.tag);
-    //    if (Time.unscaledTime > _nextOnStayTriggerAllowed)
-    //    {
-    //        OnTriggerEnter(other);
-    //        _nextOnStayTriggerAllowed = Time.unscaledTime + ConsecutiveSecondsUntilOnStayAllowed;
-    //    }
-    //}
-
-    //private void OnCollisionStay(Collision collision)
-    //{
-    //    Debug.Log("Tine: " + Time.unscaledTime + ", next: " + _nextOnStayCollisionAllowed);
-    //    Debug.Log("Player collided with something via OnCollisionStay - " + collision.gameObject.tag);
-    //    if (Time.unscaledTime > _nextOnStayCollisionAllowed)
-    //    {
-    //        OnCollisionEnter(collision);
-    //        _nextOnStayCollisionAllowed = Time.unscaledTime + ConsecutiveSecondsUntilOnStayAllowed;
-    //    }
-    //}
-
+    
     private void OnPlayerHit(GameObject gameObject)
     {
-        //switch (gameObject.tag)
-        //{
-        //    case "CorridorEnemy":
-        //        OnPlayerDeath(); // only take damage from "things" hitting the player
-        //        break;
-        //}
         MarkDamageObject mdo = gameObject.GetComponent<MarkDamageObject>();
         if ( mdo != null )
         {
             OnPlayerHit(mdo);
         }
+
+        MarkProjectile projectile = gameObject.GetComponent<MarkProjectile>();
+        if (projectile != null )
+        {
+            OnPlayerHitWithProjectile(projectile);
+        }
     }
 
     private void OnPlayerHit(MarkDamageObject mdo)
     {
+        if ( !mdo.IsEnemy)
+        {
+            return;
+        }
         if ( Time.unscaledTime <= _nextTimeEnemyHitHurtAllowed)
         {
             return; // not allowed to hit yet
@@ -126,6 +107,7 @@ public class MarkPlayerCollision : MonoBehaviour
         Debug.Log("Player damaged. New Health: " + PlayerHealth + ", Damage taken: " + mdo.DamageAmount);
         if ( PlayerHealth <= 0 || mdo.IsInstantKill)
         {
+            PlayerHealth = 0; 
             OnPlayerDeath();
         } else
         {
@@ -134,6 +116,17 @@ public class MarkPlayerCollision : MonoBehaviour
                 PlayerHurtAudioPlayer.PlayRandomIfAllowed();
             }
             StartCoroutine(ShowHurtOverlay());
+        }
+    }
+
+    private void OnPlayerHitWithProjectile(MarkProjectile projectile)
+    {
+        if (_markProjectileManager != null)
+        {
+            _markProjectileManager.OnProjectileHitPlayer(projectile);
+        } else
+        {
+            Debug.LogWarning("Projectile hit player, but there's not projectile manager");
         }
     }
 
@@ -171,4 +164,29 @@ public class MarkPlayerCollision : MonoBehaviour
             EnemyKilledAudioPlayer.PlayRandomIfAllowed();
         }
     }
+
+    // These ON-STAY methods don't work; what the fuck unity - it half works, sometimes
+
+
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    Debug.Log("Player collided with something via OnTriggerStay - " + other.gameObject.tag);
+    //    if (Time.unscaledTime > _nextOnStayTriggerAllowed)
+    //    {
+    //        OnTriggerEnter(other);
+    //        _nextOnStayTriggerAllowed = Time.unscaledTime + ConsecutiveSecondsUntilOnStayAllowed;
+    //    }
+    //}
+
+    //private void OnCollisionStay(Collision collision)
+    //{
+    //    Debug.Log("Tine: " + Time.unscaledTime + ", next: " + _nextOnStayCollisionAllowed);
+    //    Debug.Log("Player collided with something via OnCollisionStay - " + collision.gameObject.tag);
+    //    if (Time.unscaledTime > _nextOnStayCollisionAllowed)
+    //    {
+    //        OnCollisionEnter(collision);
+    //        _nextOnStayCollisionAllowed = Time.unscaledTime + ConsecutiveSecondsUntilOnStayAllowed;
+    //    }
+    //}
+
 }

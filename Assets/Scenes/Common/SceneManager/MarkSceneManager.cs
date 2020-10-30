@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scenes.Common.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -30,6 +31,7 @@ public class MarkSceneManager : MonoBehaviour
 
     public void LoadScene(int buildIndex)
     {
+        MarkGameState.PreviousSceneLoaded = GetCurrentSceneIndex();
         Debug.Log("Loading scene " + buildIndex);
         ShowLoadingScreen();
         SceneManager.LoadScene(buildIndex); // main menu is at root
@@ -37,13 +39,24 @@ public class MarkSceneManager : MonoBehaviour
 
     public void LoadNextScene()
     {
-        LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        LoadScene(GetCurrentSceneIndex() + 1);
+    }
+
+    public int GetCurrentSceneIndex()
+    {
+        return SceneManager.GetActiveScene().buildIndex;
     }
 
     public void RestartCurrentScene()
     {
+        // MarkGameState.ShowIntroSceneMessage = false;
         Debug.Log("Restarting current scene");
-        LoadScene(SceneManager.GetActiveScene().buildIndex); // restart the scene
+        LoadScene(GetCurrentSceneIndex()); // restart the scene
+    }
+
+    public bool IsInRestartedScene()
+    {
+        return GetCurrentSceneIndex() == MarkGameState.PreviousSceneLoaded;
     }
 
     private void ShowLoadingScreen()

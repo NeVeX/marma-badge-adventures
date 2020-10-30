@@ -44,6 +44,8 @@ GameObject:
   - component: {fileID: 2839476236132879032}
   - component: {fileID: 8300179129449160021}
   - component: {fileID: 1642900041510226462}
+  - component: {fileID: 3194582712092060751}
+  - component: {fileID: 2272213183957370253}
   m_Layer: 0
   m_Name: ExBoyfriend-Cupid
   m_TagString: ExBoyfriend
@@ -98,14 +100,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthBarControl: {fileID: 4361920234824854983}
-  RandomAudioHurtPlayer: {fileID: 0}
-  RandomAudioDeadPlayer: {fileID: 0}
+  RandomAudioHurtPlayer: {fileID: 2272213183957370253}
+  RandomAudioDeadPlayer: {fileID: 3194582712092060751}
   RandomAudioYellPlayer: {fileID: 0}
   MarkExplosion: {fileID: 5506793277900200416}
   IsStationary: 1
   MinMoveSpeed: 0
   MaxMoveSpeed: 0
-  Health: 500
+  Health: 1000
 --- !u!136 &2839476236132879032
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -132,7 +134,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.959
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -231,6 +233,40 @@ MonoBehaviour:
   RoamRadius: 4.2
   MoveSpeed: 2
   MinHeight: 5
+--- !u!114 &3194582712092060751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2839476236132879037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc3da11cb732114b9d526e6bca90de7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinimumBetweenPlaySeconds: 0
+  AudioClips:
+  - {fileID: 8300000, guid: b2b558986e6d7c44c90db463f36df634, type: 3}
+  RandomAudioSource: {fileID: 8300179129449160021}
+  IsManualControlled: 1
+--- !u!114 &2272213183957370253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2839476236132879037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc3da11cb732114b9d526e6bca90de7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinimumBetweenPlaySeconds: 0
+  AudioClips:
+  - {fileID: 8300000, guid: 33ae6cbb3277a704e9124f395e2be07a, type: 3}
+  RandomAudioSource: {fileID: 8300179129449160021}
+  IsManualControlled: 1
 --- !u!82 &3707834648356032148
 AudioSource:
   m_ObjectHideFlags: 0

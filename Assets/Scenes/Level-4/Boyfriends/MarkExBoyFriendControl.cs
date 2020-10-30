@@ -108,7 +108,10 @@ public class MarkExBoyFriendControl : MonoBehaviour
             OnDestroyBoyfriend();
         } else
         {
-            RandomAudioHurtPlayer?.PlayRandomIfAllowed();
+            if (RandomAudioHurtPlayer != null)
+            {
+                RandomAudioHurtPlayer.PlayRandomIfAllowed();
+            }
         }
     }
 
@@ -122,8 +125,15 @@ public class MarkExBoyFriendControl : MonoBehaviour
         Debug.Log("Destroying ex-boyfriend");
         _spawnObject.BroadcastMessage("killEnemy", _spawnerID);
 
-        RandomAudioYellPlayer?.StopPlaying(); // stop all audio yelling
-        RandomAudioHurtPlayer?.StopPlaying();
+
+        if (RandomAudioYellPlayer != null)
+        {
+            RandomAudioYellPlayer.StopPlaying(); // stop all audio yelling
+        }
+        if (RandomAudioHurtPlayer != null)
+        {
+            RandomAudioHurtPlayer.StopPlaying();
+        }
 
         _shouldMove = false; // don't move
 

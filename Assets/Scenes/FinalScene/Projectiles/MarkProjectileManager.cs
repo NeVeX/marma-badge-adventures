@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -68,28 +69,29 @@ public class MarkProjectileManager : MonoBehaviour
         Transform shootFromLocation = _currentChildProjectile.transform;
         Vector3 aimLookat = getCrossHairTargetLookAt();
         shootFromLocation.transform.LookAt(aimLookat);
-        GameObject shootObject = Instantiate(_currentChildProjectile.gameObject, shootFromLocation.position, shootFromLocation.rotation);
-        ConfigureProjectileForFiring(shootObject.GetComponent<MarkProjectile>());
-        Rigidbody shootObjectRB = shootObject.GetComponent<Rigidbody>();
+        //GameObject shootObject = Instantiate(_currentChildProjectile.gameObject, shootFromLocation.position, shootFromLocation.rotation);
+        ConfigureProjectileForFiring(_currentChildProjectile.GetComponent<MarkProjectile>());
+        Rigidbody shootObjectRB = _currentChildProjectile.GetComponent<Rigidbody>();
         shootObjectRB.AddForce(shootFromLocation.forward * ShotPower);
 
-        Destroy(shootObject, DestoryObjectTimeSeconds); // destroy after a few seconds
+        _currentChildProjectile.ShouldRotate = true;
+
+        Debug.Log("Launched projectile from player called " + _currentChildProjectile.name);
+        Destroy(_currentChildProjectile, DestoryObjectTimeSeconds); // destroy after a few seconds
 
         // Deactivate the previous child
         DeactivateCurrentProjectile();
-
-        Debug.Log("Launched projectile from player called " + shootObject.name);
     }
 
-    public void OnProjectileHitPlayer(MarkProjectile projectile)
+    public bool OnProjectileHitPlayer(MarkProjectile projectile)
     {
         if ( !projectile.CanPlayerGrab)
         {
-            return;
+            return false;
         }
         if ( _currentChildProjectile != null )
         {
-            return; 
+            return false; 
         }
 
         string projectileName = projectile.name.Replace("(Clone)", "");
@@ -103,11 +105,14 @@ public class MarkProjectileManager : MonoBehaviour
         MarkProjectile foundChildProjectile = childProjectiles.Find(cp => cp.gameObject.name.Equals(projectileName));
         if ( foundChildProjectile == null )
         {
-            return;
+            return false;
         }
 
+        GameObject instanceObject = Instantiate(foundChildProjectile.gameObject, foundChildProjectile.transform.position, foundChildProjectile.transform.rotation);
+        instanceObject.transform.parent = foundChildProjectile.transform.parent;
         DeactivateCurrentProjectile();
-        ActivateProjectile(foundChildProjectile);
+        ActivateProjectile(instanceObject.GetComponent<MarkProjectile>());
+        return true;
     }
 
     private Vector3 getCrossHairTargetLookAt()
@@ -130,7 +135,7 @@ public class MarkProjectileManager : MonoBehaviour
     {
         if (_currentChildProjectile != null)
         {
-            _currentChildProjectile.gameObject.SetActive(false); // hide it
+            //_currentChildProjectile.gameObject.SetActive(false); // hide it
             _currentChildProjectile = null; 
         }
     }
@@ -146,6 +151,10 @@ public class MarkProjectileManager : MonoBehaviour
         if (_currentChildProjectile != null)
         {
             _currentChildProjectile.gameObject.SetActive(true);
+            if ( _currentChildProjectile.PlayerGrabAudioSource != null )
+            {
+                _currentChildProjectile.PlayerGrabAudioSource.Play();
+            }
         }
     }
 }

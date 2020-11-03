@@ -12,7 +12,6 @@ public class MarkPlayerCollision : MonoBehaviour
     [SerializeField] MarkRandomAudioPlayer PlayerHealthPickupAudioPlayer;
     [SerializeField] GameObject DeathMenu;
 
-
     private MarkProjectileManager _markProjectileManager;
     private float _nextTimeEnemyHitHurtAllowed = -1.0f;
 
@@ -123,7 +122,14 @@ public class MarkPlayerCollision : MonoBehaviour
     {
         if (_markProjectileManager != null)
         {
-            _markProjectileManager.OnProjectileHitPlayer(projectile);
+            bool pickedUp = _markProjectileManager.OnProjectileHitPlayer(projectile);
+            if ( pickedUp )
+            {
+                if ( PlayerHealthPickupAudioPlayer != null)
+                {
+                    PlayerHealthPickupAudioPlayer.PlayRandomIfAllowed();
+                }
+            }
         } else
         {
             Debug.LogWarning("Projectile hit player, but there's not projectile manager");

@@ -5,7 +5,21 @@ using UnityEngine;
 public class MarkProjectile : MonoBehaviour
 {
     [SerializeField] public bool CanPlayerGrab = true;
+    
+    public bool ShouldRotate = false;
+    [SerializeField] float SpeedRotation = 200.0f;
+    [SerializeField] public AudioSource PlayerGrabAudioSource;
+
     private bool _canCollide = true;
+
+    public void Update()
+    {
+        if (ShouldRotate)
+        {
+            transform.Rotate(Vector3.up, SpeedRotation * Time.deltaTime);
+            transform.Rotate(Vector3.right, (SpeedRotation / 4) * Time.deltaTime);
+        }
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -18,7 +32,7 @@ public class MarkProjectile : MonoBehaviour
         {
             OnPlayerColliderHit();
         }
-        else if (collision.gameObject.CompareTag("Boss"))
+        else if (collision.gameObject.name.Equals("Boss"))
         {
             Destroy(gameObject);
         }

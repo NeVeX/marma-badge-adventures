@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalScene/FinalScene.unity
     guid: f6b34b8dfb689684b878fdfabe523a19
+  - enabled: 1
+    path: Assets/Scenes/AnswerNoEndingScene/AnswerNoEndingScene.unity
+    guid: 6627444cafdd32f4daaee137f7bbe426
   m_configObjects: {}

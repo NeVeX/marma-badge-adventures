@@ -9,6 +9,17 @@ public class MainMenu : MonoBehaviour
 {
 
     [SerializeField] GameObject FocusButton;
+    [SerializeField] AudioSource MenuMusic;
+
+    public void Awake()
+    {
+        Debug.Log("Main menu awake called");
+    }
+
+    public void Start()
+    {
+        Debug.Log("Main menu Start called"); 
+    }
 
     public void StartGame()
     {
@@ -19,6 +30,11 @@ public class MainMenu : MonoBehaviour
     private void OnEnable()
     {
         EventSystem.current.SetSelectedGameObject(FocusButton);
+        Debug.Log("Main menu onEnable called");
+        if (MenuMusic != null && !MenuMusic.isPlaying)
+        {
+            MenuMusic.Play();
+        }
     }
 
     void OnDisable()

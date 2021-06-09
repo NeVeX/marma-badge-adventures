@@ -19,16 +19,29 @@ public class MarkProjectileWaveConfig : MonoBehaviour
     [SerializeField] public int LowHealthForNextStage;
     [SerializeField] public AudioClip AudioToPlayOnActivated;
 
-    public GameObject GetNextProjectile()
+    [SerializeField] public MarkProjectileWaveConfig AnimalsWaveConfig;
+
+    public GameObject GetNextProjectile(MarkProjectile playerCurrentlyHeldProjectile)
     {
-        double percentage = Random.Range(0.0f, 1.0f);
-        // Debug.Log("Projectile percentage: " + percentage);
-        if ( percentage <= PercentBad)
+        if (AnimalsWaveConfig != null
+            && playerCurrentlyHeldProjectile != null
+            && playerCurrentlyHeldProjectile.name.StartsWith("Projectile-Fruit-Orange"))
         {
-            return ProjectilesBad[Random.Range(0, ProjectilesBad.Length)];
-        } else
+            // holding orange, spawn next set of projectiles instead
+            return AnimalsWaveConfig.GetNextProjectile(playerCurrentlyHeldProjectile);
+        }
+        else
         {
-            return ProjectilesGood[Random.Range(0, ProjectilesGood.Length)];
+            double percentage = Random.Range(0.0f, 1.0f);
+            // Debug.Log("Projectile percentage: " + percentage);
+            if (percentage <= PercentBad)
+            {
+                return ProjectilesBad[Random.Range(0, ProjectilesBad.Length)];
+            }
+            else
+            {
+                return ProjectilesGood[Random.Range(0, ProjectilesGood.Length)];
+            }
         }
     }
 

@@ -65,7 +65,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CanPlayerGrab: 0
   ShouldRotate: 0
-  SpeedRotation: 80
+  SpeedRotation: 20
   PlayerGrabAudioSource: {fileID: 0}
 --- !u!114 &2710601597546692595
 MonoBehaviour:
@@ -93,8 +93,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.36633033, y: 0.9025569, z: 1.0934391}
-  m_Center: {x: 0.004916042, y: 0.38520575, z: -0.10612965}
+  m_Size: {x: 0.36633033, y: 0.9025569, z: 1.0558167}
+  m_Center: {x: 0.004916042, y: 0.38520575, z: 0.12684059}
 --- !u!1 &4270327768204982588
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,7 +155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4539413700843564, guid: 7f3a093d1f6934b419ad9871984825f8, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4539413700843564, guid: 7f3a093d1f6934b419ad9871984825f8, type: 3}
       propertyPath: m_LocalRotation.z
@@ -163,7 +163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4539413700843564, guid: 7f3a093d1f6934b419ad9871984825f8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4539413700843564, guid: 7f3a093d1f6934b419ad9871984825f8, type: 3}
       propertyPath: m_RootOrder
@@ -175,7 +175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4539413700843564, guid: 7f3a093d1f6934b419ad9871984825f8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4539413700843564, guid: 7f3a093d1f6934b419ad9871984825f8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z

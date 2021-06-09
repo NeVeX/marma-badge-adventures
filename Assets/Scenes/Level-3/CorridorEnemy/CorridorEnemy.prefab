@@ -371,7 +371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DamageAmount: 1000000
   IsInstantKill: 1
-  IsEnemy: 0
+  IsEnemy: 1
 --- !u!1001 &5917009825897982784
 PrefabInstance:
   m_ObjectHideFlags: 0

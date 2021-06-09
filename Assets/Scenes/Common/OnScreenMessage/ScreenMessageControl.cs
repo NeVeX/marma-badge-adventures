@@ -2,12 +2,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using UnityEngine;
 
 public class ScreenMessageControl : MonoBehaviour
 {
-
     public enum MessageAnswer { Yes, No }
 
     private bool _IsMessageShowing;
@@ -31,6 +31,7 @@ public class ScreenMessageControl : MonoBehaviour
     [SerializeField] bool ShowOnStartup = true;
     [SerializeField] bool MessageShowUntilPlayerInput = true;
     [SerializeField] int MessageShowForSeconds = 5;
+    [SerializeField] GameObject[] GameObjectsToActivateOnHide;
 
     private AudioSource _AudioSourceToPlayOnShow;
     private CharacterController _characterController = null;
@@ -151,6 +152,11 @@ public class ScreenMessageControl : MonoBehaviour
         } else
         {
             Debug.Log("There is no MessagePanelAfter to show after hiding this panel");
+            if (GameObjectsToActivateOnHide != null)
+            {
+                Debug.Log("Activating the game-object after this panel is deactivated");
+                GameObjectsToActivateOnHide.ToList().ForEach(gameObj => gameObj.SetActive(true));
+            }
         }
     }
 

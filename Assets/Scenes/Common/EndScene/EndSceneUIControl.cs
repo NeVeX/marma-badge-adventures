@@ -15,6 +15,9 @@ public class EndSceneUIControl : MonoBehaviour
     [SerializeField] GameObject[] GameObjectsToDeactivate;
     [SerializeField] MarkRelic Relic;
     [SerializeField] MarkSceneManager MarkSceneManager;
+    [SerializeField] GameObject TimeTrialUI;
+    [SerializeField] TMPro.TextMeshProUGUI TimeTrialText;
+
     private float _timeUntilInputAcceptance = 0.0f;
 
     void Start()
@@ -24,6 +27,7 @@ public class EndSceneUIControl : MonoBehaviour
 
     void OnEnable()
     {
+        MarkStopWatch.Stop(); 
         MarkSceneManager.IsSceneCompleted = true;
         MarkGameState.AddCollectedRelic(Relic);
         MarkSceneManager.StopAllAudio();
@@ -38,8 +42,30 @@ public class EndSceneUIControl : MonoBehaviour
         {
             GameObjectsToDeactivate.ToList().FindAll(go => go != null).ForEach(go => go.SetActive(false)); // deactivate each one
         }
+        ShouldShowTimeTrial();
     }
 
+    private void Update()
+    {
+        if (Input.GetButtonDown("X Button"))
+        {
+            MarkGameState.IsShowingTimeTrial = !MarkGameState.IsShowingTimeTrial;
+            ShouldShowTimeTrial();
+        }
+    }
+
+    private void ShouldShowTimeTrial()
+    {
+        if ( TimeTrialUI != null )
+        {
+            TimeTrialUI.SetActive(MarkGameState.IsShowingTimeTrial);
+            if ( TimeTrialUI.activeSelf && TimeTrialText != null)
+            {
+                Debug.Log("Time taken to complete this level: " +MarkStopWatch.Elapsed());
+                TimeTrialText.text = MarkStopWatch.Elapsed();
+            }
+        }
+    }
 
     private void OnDisable()
     {

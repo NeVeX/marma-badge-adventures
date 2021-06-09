@@ -190,6 +190,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5142919915796308551, guid: 2ba56ca8517c6264f8d99d0958177f82, type: 3}
   m_PrefabInstance: {fileID: 658230520}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &658230522 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5142919915796308548, guid: 2ba56ca8517c6264f8d99d0958177f82, type: 3}
+  m_PrefabInstance: {fileID: 658230520}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658230521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: debe79d7a6f566f4096f1c55af5c943e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &822952773
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,7 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172a5826a88a395448a11c3114f8d8bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WaitSecondsUntilInputAllowed: 25
+  WaitSecondsUntilInputAllowed: 5
   GameObjectWithMarkSceneManager: {fileID: 658230521}
 --- !u!1 &1122066740
 GameObject:
@@ -484,21 +495,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3101247184271863169, guid: 3b10ef96fbdce5d479c10bf8f99cb6e1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 405.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3101247184271863169, guid: 3b10ef96fbdce5d479c10bf8f99cb6e1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3101247184271863174, guid: 3b10ef96fbdce5d479c10bf8f99cb6e1, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 822952775}
+    - target: {fileID: 3101247184271863174, guid: 3b10ef96fbdce5d479c10bf8f99cb6e1, type: 3}
+      propertyPath: MarkSceneManager
+      value: 
+      objectReference: {fileID: 658230522}
+    - target: {fileID: 3101247184296753002, guid: 3b10ef96fbdce5d479c10bf8f99cb6e1, type: 3}
+      propertyPath: timeToStartScrollingSeconds
+      value: 8.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3101247184296753013, guid: 3b10ef96fbdce5d479c10bf8f99cb6e1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3101247184296753013, guid: 3b10ef96fbdce5d479c10bf8f99cb6e1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1686
+      value: -1955
       objectReference: {fileID: 0}
     - target: {fileID: 3101247184296753013, guid: 3b10ef96fbdce5d479c10bf8f99cb6e1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -520.8
+      value: -619
       objectReference: {fileID: 0}
     - target: {fileID: 3101247184296753013, guid: 3b10ef96fbdce5d479c10bf8f99cb6e1, type: 3}
       propertyPath: m_LocalRotation.x
@@ -538,23 +565,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3101247184296753015, guid: 3b10ef96fbdce5d479c10bf8f99cb6e1, type: 3}
       propertyPath: m_Text
-      value: "Episode 69\r\n\r\n\r\nSexyWorld\r\n\r\n\r\nA once peaceful world, \r\nis
-        now in great peril!\r\n\r\n\r\n:-(\r\n\r\n\r\nAn evil overlord called \r\n\"Hordak
-        the Hoodrat\" has captured \r\nand imprisioned our supreme \r\nleader \"Marky
-        Honey Buns\"\r\n\r\n\r\n\r\nA (non-white) princess/warrior \r\nmust save
-        this world from the \r\nthroes of it's evil loneliness \r\nand general unease.\r\n\r\n\r\n\r\nThe
-        gods of this world are too \r\nweak to defeat Hordat the Hoodrat, \r\nsince
-        he has hidden their \r\n(oddly accessible) power relics \r\nin the far reaches
-        of this \r\n...SexyWorld!\r\n\r\n\r\n\r\nPlease, if you are a non-white \r\nprincess/warrior,
-        come help us! \r\n\r\n\r\n\r\n\r\n\r\nYou're our only hope?\r\n\r\n\r\n\r\n\r\n\r\n(Unless
-        lots of ye show up, \r\nin which case, please do not \r\ndouble park or block
-        entrances, \r\nthe world council is already \r\nupset with us from last week's
-        \r\nhuge turnout to Sexy Bingo)\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAnyhoo...to
-        summarize\r\nas a TLDR with help from \r\nSting and The Police...\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS.O.S
-        Girl! \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAwwww yeah!!\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nLets-a-go!!\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nBut
-        seriously we need help,\r\nlike for realz\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n#GetAMoveOn\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nRemember
-        to vote on Nov 3rd\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPress the start
-        button!\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nThis chorus loops \r\nforever btw\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nSeriously\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nGurl...\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nLOL\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nROFL\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPoop\r\n"
+      value: "Episode 69\r\n\r\n\r\nSexyWorld\r\n\r\n\r\n\r\nA once peaceful world,
+        \r\nis now in great peril!\r\n\r\n\r\n\r\n:-(\r\n\r\n\r\n\r\nAn evil overlord
+        called \r\n\"Hordak the Hoodrat\" has captured \r\nand imprisioned our supreme
+        \r\nleader \"Marky Hunny Bunny\"\r\n\r\n\r\n\r\n\r\nA (non-white) princess/warrior
+        \r\nmust save this world from the \r\nthroes of its evil loneliness \r\nand
+        general unease.\r\n\r\n\r\n\r\n\r\nThe gods of this world are too \r\nweak
+        to defeat Hordat the Hoodrat, \r\nsince he has hidden their \r\n(oddly accessible)
+        Sexy Relics \r\nin the far reaches of this \r\n...SexyWorld!\r\n\r\n\r\n\r\n\r\n\r\nPlease,
+        if you are a (non-white) \r\nprincess/warrior, come help us! \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nYou
+        are our only hope?\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAnd if lots of ye show
+        up, \r\nplease do not double park \r\nor block building entrances!\r\nThe
+        Sexy Council is already \r\nupset with us from last week's \r\nhuge turnout
+        to Sexy Bingo!\r\n\r\n\r\n\r\n\r\n\r\nSo be warned!\r\nTICKETS WILL BE ISSUED\r\nBY
+        THE SEXY POLICE!\r\n\r\n\r\n\r\n\r\n\r\n\r\n...Speaking of Sexy Police;\r\nperhaps
+        this message will\r\nreach far and wide with the\r\nhelp of Sexy Sting and
+        his\r\nSexy Police song...\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS.O.S Girl!
+        \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAwwww yeah!!\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nLets-a-go!!\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nBut
+        seriously we need help,\r\nlike for realz!!1!\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n#GetAMoveOn\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nI
+        hope you voted!\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDid Trump win??\r\n\r\n:-|\r\n\r\n\r\n\r\n\r\n\r\n\r\nThis
+        chorus loops \r\nforever btw\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nSeriously\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nGurl...\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nLOL\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nROFL\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nThis
+        text is about\r\nto become pooped!\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPress the
+        A button!\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nzzzzzzzzzzz\r\n\r\n"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b10ef96fbdce5d479c10bf8f99cb6e1, type: 3}

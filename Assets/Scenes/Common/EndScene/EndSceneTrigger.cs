@@ -12,4 +12,12 @@ public class EndSceneTrigger : MonoBehaviour
         UIToShow.SetActive(true);
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name.Equals("pickup"))
+        {
+            UIToShow.SetActive(true);
+        }
+    }
+
 }

@@ -7,13 +7,14 @@ namespace Assets.Scenes.Common.Scripts
 {
     public enum MarkRelic
     {
-        PolaroidCamera, GoldenHeart
+        PolaroidCamera, GoldenHeart, RedTruck
     }
 
     public static class MarkGameState
     {
         private static HashSet<MarkRelic> _relicsCollected = new HashSet<MarkRelic>();
-        public static bool IsInDebugMode = true;
+        public static bool IsInDebugMode = false; // can be flipped on in pause menu (y button)
+        public static bool IsShowingTimeTrial = false; 
         public static int PreviousSceneLoaded = 0;
 
         private static Dictionary<int, bool> startupSceneMessages = new Dictionary<int, bool>();

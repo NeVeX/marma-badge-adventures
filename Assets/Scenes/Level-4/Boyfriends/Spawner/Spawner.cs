@@ -89,7 +89,7 @@ public class Spawner : MonoBehaviour
 	void Start()
 	{
 		// sets a random number for the id of the spawner
-		SpawnID = UnityEngine.Random.Range(1, 500);
+		SpawnID = UnityEngine.Random.Range(1, int.MaxValue);
 		Enemies.Add(EnemyLevels.Easy, EasyEnemy);
 		Enemies.Add(EnemyLevels.Boss, BossEnemy);
 		Enemies.Add(EnemyLevels.Medium, MediumEnemy);
@@ -218,7 +218,7 @@ public class Spawner : MonoBehaviour
 	private void checkIfCompleted()
     {
 		//Debug.Log("_alreadyCompleted: " + _alreadyCompleted + ", Spawn: " + Spawn + ", waveSpawn:" + waveSpawn + ", numEnemy:" + numEnemy);
-		if ( !_alreadyCompleted && !Spawn && numEnemy == 0)
+		if ( !_alreadyCompleted && !Spawn && numEnemy <= 0)
         {
 			//Debug.Log("Spawner ["+SpawnID+"] is complete - no more waves, spawning and all enemies dead");
 			_alreadyCompleted = true;

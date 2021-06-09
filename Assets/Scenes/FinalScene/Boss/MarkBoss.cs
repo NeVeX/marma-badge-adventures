@@ -15,20 +15,30 @@ public class MarkBoss : MonoBehaviour
     [SerializeField] private float destroyTimeSeconds = 5f;
     [SerializeField] MarkRandomAudioPlayer ShootRandomAudioPlayer;
     [SerializeField] MarkRandomAudioPlayer HurtRandomAudioPlayer;
+    [SerializeField] MarkExplosion MarkExplosion;
+    [SerializeField] AudioClip BossDeathSound;
+    [SerializeField] GameObject RabbitModel;
+    [SerializeField] ScreenMessageControl EndingScreenControl;
 
+    private MarkProjectileManager _markPlayerProjectileManager;
     private float _nextTimeAllowedToFire = 0.0f;
     private GameObject _player;
     private int _currentWaveConfigIndex;
     private bool _hasPlayedActivatedSound = false;
     private bool _hasInvokedPlayActivatedSound = false;
+    private bool _isBossDestroyed = false;
 
     void Start()
     {
-        _currentWaveConfigIndex = WaveConfigs.Length - 1; // set this to zero on release
+        _currentWaveConfigIndex = 0; // WaveConfigs.Length - 1; // set this to zero on release
         HealthBarControl.SetMaxHealth(Health);
         _player = GameObject.Find("Player");
         Assert.IsNotNull(_player);
-        SetNextTimeCanFire(6.0f); // small buffer
+
+        _markPlayerProjectileManager = GameObject.FindObjectOfType<MarkProjectileManager>();
+        Assert.IsNotNull(_markPlayerProjectileManager);
+
+        //SetNextTimeCanFire(5.0f); // small buffer
     }
 
     private void LateUpdate()
@@ -44,6 +54,10 @@ public class MarkBoss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (_isBossDestroyed )
+        {
+            return;
+        }
         bool isAllowedToFire = Time.unscaledTime > _nextTimeAllowedToFire;
         if (Time.timeScale > 0f && isAllowedToFire && _hasPlayedActivatedSound)
         {
@@ -66,7 +80,7 @@ public class MarkBoss : MonoBehaviour
     {
         _hasPlayedActivatedSound = false;
         BossActivatedSound.clip = WaveConfigs[_currentWaveConfigIndex].AudioToPlayOnActivated;
-        float audioTime = BossActivatedSound.clip.length;
+        float audioTime = BossActivatedSound.clip.length + 1.0f; // slight buffer
         BossActivatedSound.Play();
         yield return new WaitForSecondsRealtime(audioTime);
         _hasPlayedActivatedSound = true;
@@ -106,7 +120,9 @@ public class MarkBoss : MonoBehaviour
 
     private GameObject PickProjectileToFire()
     {
-        return WaveConfigs[_currentWaveConfigIndex].GetNextProjectile();
+        MarkProjectile mp = _markPlayerProjectileManager.GetCurrentlyHeldProjectile();
+        //Debug.Log("Player is holding " + mp?.name);
+        return WaveConfigs[_currentWaveConfigIndex].GetNextProjectile(mp);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -122,11 +138,15 @@ public class MarkBoss : MonoBehaviour
         {
             OnHitPlayer();
         }
-
     }
 
     private void OnTakeDamage(MarkDamageObject damageObject)
     {
+        if ( damageObject.DamageAmount <= 0)
+        {
+            return;
+        }
+
         Health -= damageObject.DamageAmount;
         Debug.Log("Boss taking damage of " + damageObject.DamageAmount + " from "+ damageObject.name +". Health left: " + Health);
         if (Health <= 0 || damageObject.IsInstantKill)
@@ -166,70 +186,38 @@ public class MarkBoss : MonoBehaviour
 
     private void OnDestroyBoss()
     {
-        Destroy(gameObject);
+        _isBossDestroyed = true;
+        float explosionTime = MarkExplosion.Explode();
+        float deathSoundTime = BossDeathSound.length;
+        BossActivatedSound.clip = BossDeathSound;
+        BossActivatedSound.Play();
+
+        float waitTime = Mathf.Max(explosionTime, deathSoundTime);
+
+        //Destroy(RabbitModel); // destroy the boss
+        RabbitModel.SetActive(false);
+
+        // wait a while before next set of actions
+        StartCoroutine(ShowEndingMessage(waitTime));
     }
+    
+    private IEnumerator ShowEndingMessage(float timeUntilShow)
+    {
+        yield return new WaitForSeconds(timeUntilShow);
+        Debug.Log("Showing Ending Screen Control after boss defeated");
+        EndingScreenControl.ShowMessage();
 
 
-
-
-    //    void LaunchProjectileAngle()
-    //    {
-
-
-
-    //        GameObject projectileToLaunch = PickProjectileToFire();
-    //        Transform aimLookat = _player.transform;
-    //        ShootObjectLocation.transform.LookAt(aimLookat);
-    //        GameObject shootObject = Instantiate(projectileToLaunch, ShootObjectLocation.position, ShootObjectLocation.rotation);
-
-    //        float firingAngle = 45.0f;
-    //        float gravity = 9.8f;
-
-
-    //        // Move projectile to the position of throwing object + add some offset if needed.
-    //        //Projectile.position = myTransform.position + new Vector3(0, 0.0f, 0);
-
-    //        // Calculate distance to target
-    //        float target_Distance = Vector3.Distance(shootObject.transform.position, aimLookat.position);
-
-    //        // Calculate the velocity needed to throw the object to the target at specified angle.
-    //        float projectile_Velocity = target_Distance / (Mathf.Sin(2 * firingAngle * Mathf.Deg2Rad) / gravity);
-
-    //        // Extract the X  Y componenent of the velocity
-    //        float Vx = Mathf.Sqrt(projectile_Velocity) * Mathf.Cos(firingAngle * Mathf.Deg2Rad);
-    //        float Vy = Mathf.Sqrt(projectile_Velocity) * Mathf.Sin(firingAngle * Mathf.Deg2Rad);
-
-    //        // Calculate flight time.
-    //        float flightDuration = target_Distance / Vx;
-
-    //        // Rotate projectile to face the target.
-    //        //Projectile.rotation = Quaternion.LookRotation(Target.position - Projectile.position);
-
-
-    //        //Vector3 vel = //new Vector3(Vx * direction.x, Vy);
-    //        ShootObjectLocation.forward.Set(ShootObjectLocation.forward.x * Vx, ShootObjectLocation.forward.y * Vy, ShootObjectLocation.forward.z);
-    //        //GameObject go = Instantiate(granade, transform.position + posOffest, new Quaternion());
-
-    //        Rigidbody shootObjectRB = shootObject.GetComponent<Rigidbody>();
-    //        shootObjectRB.AddForce(ShootObjectLocation.forward * WaveConfigs[_currentWaveConfigIndex].GetShotPower());
-
-    //        //shootObjectRB.AddForce(vel );
-    //        //go.GetComponent<Rigidbody2D>().AddTorque(torque);
-
-
-    ////        float elapse_time = 0;
-
-
-    //        //while (elapse_time < flightDuration)
-    //        //{
-    //        //    //shootObject.transform.Translate(0, (Vy - (gravity * elapse_time)) * Time.deltaTime, Vx * Time.deltaTime);
-    //        //    Rigidbody shootObjectRB = shootObject.GetComponent<Rigidbody>();
-    //        //    shootObjectRB.AddForce(ShootObjectLocation.forward * WaveConfigs[_currentWaveConfigIndex].GetShotPower());
-    //        //    elapse_time += Time.deltaTime;
-
-    //        //    yield return null;
-    //        //}
-    //    }
-
+        // Fix: remove the "boss" still from the scene in the way of the ending objects
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.isKinematic = true;
+            rb.useGravity = false;
+            rb.detectCollisions = false;
+        }
+        // hide it too
+        transform.position = new Vector3(5000, 5000, 5000);
+    }
 
 }

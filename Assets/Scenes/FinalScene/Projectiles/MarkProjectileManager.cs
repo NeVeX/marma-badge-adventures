@@ -16,6 +16,11 @@ public class MarkProjectileManager : MonoBehaviour
     private float _nextTimeAllowedToFire = 0.0f;
     private GameObject _crossHair;
 
+    public MarkProjectile GetCurrentlyHeldProjectile()
+    {
+        return _currentChildProjectile;
+    }
+
     private void Awake()
     {
         //_boss = GameObject.Find("Boss");
@@ -23,7 +28,7 @@ public class MarkProjectileManager : MonoBehaviour
         _crossHair = GameObject.Find("Crosshair");
         Assert.IsNotNull(_crossHair);
 
-        MarkProjectile[] projectiles = GetComponentsInChildren<MarkProjectile>(true); // include in
+        MarkProjectile[] projectiles = GetComponentsInChildren<MarkProjectile>(true); // include inactives
         if ( projectiles != null )
         {
             projectiles.ToList().ForEach(p => {
@@ -38,6 +43,7 @@ public class MarkProjectileManager : MonoBehaviour
     private void ConfigureProjectileForHolding(MarkProjectile projectile)
     {
         projectile.GetComponent<Rigidbody>().isKinematic = true;
+        projectile.GetComponent<Collider>().enabled = false;
         projectile.TurnOffCollision();
     }
 
@@ -46,6 +52,7 @@ public class MarkProjectileManager : MonoBehaviour
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
         rb.isKinematic = false;
         rb.useGravity = true;
+        projectile.GetComponent<Collider>().enabled = true;
         projectile.TurnOnCollision();
     }
 
@@ -73,11 +80,11 @@ public class MarkProjectileManager : MonoBehaviour
         ConfigureProjectileForFiring(_currentChildProjectile.GetComponent<MarkProjectile>());
         Rigidbody shootObjectRB = _currentChildProjectile.GetComponent<Rigidbody>();
         shootObjectRB.AddForce(shootFromLocation.forward * ShotPower);
-
+        _currentChildProjectile.transform.parent = null; // remove the parent again
         _currentChildProjectile.ShouldRotate = true;
 
         Debug.Log("Launched projectile from player called " + _currentChildProjectile.name);
-        Destroy(_currentChildProjectile, DestoryObjectTimeSeconds); // destroy after a few seconds
+        Destroy(_currentChildProjectile.gameObject, DestoryObjectTimeSeconds); // destroy after a few seconds
 
         // Deactivate the previous child
         DeactivateCurrentProjectile();
@@ -89,7 +96,10 @@ public class MarkProjectileManager : MonoBehaviour
         {
             return false;
         }
-        if ( _currentChildProjectile != null )
+
+        bool shouldActivateMarmaBadger = _currentChildProjectile != null && _currentChildProjectile.name.StartsWith("Projectile-Fruit-Orange") && projectile.name.StartsWith("Projectile-Animal-Badger");
+
+        if ( _currentChildProjectile != null && !shouldActivateMarmaBadger)
         {
             return false; 
         }
@@ -100,18 +110,28 @@ public class MarkProjectileManager : MonoBehaviour
         {
             projectileName = projectileName.Substring(0, indexOfSpace);
         }
-        Debug.Log("Searching for projectile with name: " + projectileName);
+
+        if ( shouldActivateMarmaBadger )
+        {
+            projectileName = "Projectile-Animal-MarmaBadge"; // override
+            Destroy(_currentChildProjectile.gameObject); // and remove it from the scene
+            DeactivateCurrentProjectile();
+        }
+        
         // make sure we can find this projectile in the children
         MarkProjectile foundChildProjectile = childProjectiles.Find(cp => cp.gameObject.name.Equals(projectileName));
         if ( foundChildProjectile == null )
         {
+            Debug.Log("Did not find projectile with name: " + projectileName);
             return false;
         }
-
+        Debug.Log("Found projectile with name: " + projectileName);
         GameObject instanceObject = Instantiate(foundChildProjectile.gameObject, foundChildProjectile.transform.position, foundChildProjectile.transform.rotation);
         instanceObject.transform.parent = foundChildProjectile.transform.parent;
+        MarkProjectile mp = instanceObject.GetComponent<MarkProjectile>();
         DeactivateCurrentProjectile();
-        ActivateProjectile(instanceObject.GetComponent<MarkProjectile>());
+        ConfigureProjectileForHolding(mp);
+        ActivateProjectile(mp);
         return true;
     }
 

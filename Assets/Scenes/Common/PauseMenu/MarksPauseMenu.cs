@@ -25,17 +25,12 @@ public class MarksPauseMenu : MonoBehaviour
 
     void OnEnable()
     {
-        DebugOptions.SetActive(MarkGameState.IsInDebugMode);
-        if (MarkGameState.IsInDebugMode)
-        {
-            sceneSelectDebugDropdown.onValueChanged.AddListener(delegate { sceneSelectDebugDropdownValueChangedHandler(sceneSelectDebugDropdown); });
-        }
+        ControlDebugOptions(MarkGameState.IsInDebugMode);
         EventSystem.current.SetSelectedGameObject(ResumeButton.gameObject); // set the resume button as the default selection
     }
 
     void OnDisable()
     {
-        sceneSelectDebugDropdown.onValueChanged.RemoveAllListeners();
         if (EventSystem.current != null)
         {
             EventSystem.current.SetSelectedGameObject(null); // remove the current selected item
@@ -47,6 +42,17 @@ public class MarksPauseMenu : MonoBehaviour
         int sceneSelected = target.value;
         Debug.Log("sceneSelected: " + sceneSelected);
         markSceneManager.LoadScene(sceneSelected);
+    }
+
+    private void ControlDebugOptions(bool isEnabled)
+    {
+        Debug.Log("Debug Option isEnabled: " + isEnabled);
+        DebugOptions.SetActive(isEnabled);
+        sceneSelectDebugDropdown.onValueChanged.RemoveAllListeners();
+        if (isEnabled)
+        {
+            sceneSelectDebugDropdown.onValueChanged.AddListener(delegate { sceneSelectDebugDropdownValueChangedHandler(sceneSelectDebugDropdown); });
+        }
     }
 
     // Update is called once per frame
@@ -74,6 +80,7 @@ public class MarksPauseMenu : MonoBehaviour
             if (Input.GetButtonDown("Y Button"))
             {
                 MarkGameState.IsInDebugMode = !MarkGameState.IsInDebugMode; // flip the setting
+                ControlDebugOptions(MarkGameState.IsInDebugMode);
             }
 
             if (Input.GetButtonDown("B Button"))

@@ -154,12 +154,10 @@ Transform:
   - {fileID: 2066819737}
   - {fileID: 332526294}
   - {fileID: 951573443}
-  - {fileID: 617598267}
   - {fileID: 1900833579}
   - {fileID: 558976980}
   - {fileID: 1859380948}
   - {fileID: 1188462912}
-  - {fileID: 1645439391}
   - {fileID: 853081938}
   - {fileID: 1325787543}
   - {fileID: 1052692846}
@@ -201,63 +199,6 @@ Transform:
   m_Father: {fileID: 339981818}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &19110922
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 19110923}
-  - component: {fileID: 19110924}
-  m_Layer: 0
-  m_Name: SpawnPoint (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &19110923
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 19110922}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 34, y: 0, z: -8.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 721353149}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &19110924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 19110922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: 74d11a214cae852448344c06f83b3f48, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 0
-  RandomizeHeightMin: 0
-  RandomizeHeightMax: 0
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
 --- !u!1 &28468648
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,7 +398,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 509483989}
-  m_RootOrder: 13
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &43464421
 MonoBehaviour:
@@ -542,63 +483,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bdc89b974fa8414cb2506a0a01cbf15, type: 3}
---- !u!1 &60666710
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 60666711}
-  - component: {fileID: 60666712}
-  m_Layer: 0
-  m_Name: Chicken (16)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &60666711
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60666710}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.5, y: 3.4, z: 16.3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1448731896}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &60666712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60666710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
 --- !u!1 &63046373
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,7 +512,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 10441728}
-  m_RootOrder: 14
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &63046375
 MonoBehaviour:
@@ -743,11 +627,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 80687416}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -34, y: 0, z: 14.07}
+  m_LocalPosition: {x: -34, y: 2, z: 14.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2001356031}
-  m_RootOrder: 10
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &80687418
 MonoBehaviour:
@@ -768,8 +652,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -800,11 +684,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83047233}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15, y: 3.4, z: 16.3}
+  m_LocalPosition: {x: -15, y: 2, z: 16.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1448731896}
-  m_RootOrder: 11
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &83047235
 MonoBehaviour:
@@ -825,8 +709,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -857,11 +741,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 107549687}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23.3, y: 3.4, z: -18.5}
+  m_LocalPosition: {x: -23.3, y: 2, z: -18.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1448731896}
-  m_RootOrder: 36
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &107549689
 MonoBehaviour:
@@ -882,8 +766,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -976,7 +860,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 135662331}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.19, y: 0, z: -17.48}
+  m_LocalPosition: {x: 27.8, y: 2, z: -17.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1932480398}
@@ -1001,8 +885,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -1052,24 +936,17 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1941402141}
-  - {fileID: 379704345}
   - {fileID: 1118373525}
   - {fileID: 2136313832}
   - {fileID: 1707096012}
-  - {fileID: 1629764352}
   - {fileID: 604700703}
-  - {fileID: 1844503038}
   - {fileID: 889232800}
   - {fileID: 196789364}
-  - {fileID: 2092688553}
-  - {fileID: 1228278255}
   - {fileID: 650536939}
   - {fileID: 1218870730}
   - {fileID: 2015164226}
   - {fileID: 229430718}
-  - {fileID: 742562185}
   - {fileID: 1937586677}
-  - {fileID: 340792952}
   - {fileID: 161776652}
   - {fileID: 1896097730}
   - {fileID: 2010056785}
@@ -1106,7 +983,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 721353149}
-  m_RootOrder: 9
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &161095351
 MonoBehaviour:
@@ -1159,11 +1036,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161776651}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 33, y: 0, z: 10.2}
+  m_LocalPosition: {x: 36.9, y: 0, z: 10.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 152432367}
-  m_RootOrder: 19
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &161776653
 MonoBehaviour:
@@ -1172,63 +1049,6 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161776651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: 74d11a214cae852448344c06f83b3f48, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 0
-  RandomizeHeightMin: 0
-  RandomizeHeightMax: 0
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
---- !u!1 &169805216
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 169805217}
-  - component: {fileID: 169805218}
-  m_Layer: 0
-  m_Name: SpawnPoint (16)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &169805217
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 169805216}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.8, y: 0, z: -4.8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 721353149}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &169805218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 169805216}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
@@ -1355,11 +1175,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187641177}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.6, y: 0, z: -2.8999996}
+  m_LocalPosition: {x: 31, y: 0, z: -4.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1448731896}
-  m_RootOrder: 31
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &187641179
 MonoBehaviour:
@@ -1474,11 +1294,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196789363}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.5, y: 3.4, z: 16.3}
+  m_LocalPosition: {x: -3.5, y: 2, z: 16.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 152432367}
-  m_RootOrder: 9
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &196789365
 MonoBehaviour:
@@ -1499,8 +1319,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -1521,7 +1341,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &206040873
 Transform:
   m_ObjectHideFlags: 0
@@ -1670,11 +1490,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 220693095}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.84, y: 0, z: 19.95}
+  m_LocalPosition: {x: 14.3, y: 2, z: 15.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2001356031}
-  m_RootOrder: 17
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &220693097
 MonoBehaviour:
@@ -1695,8 +1515,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -6539,11 +6359,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 228744532}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.6, y: 3.4, z: -18.5}
+  m_LocalPosition: {x: 11.6, y: 2, z: -18.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1448731896}
-  m_RootOrder: 37
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &228744534
 MonoBehaviour:
@@ -6564,8 +6384,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -6600,7 +6420,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 152432367}
-  m_RootOrder: 15
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &229430719
 MonoBehaviour:
@@ -6710,11 +6530,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 243872017}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 45.2, y: 0, z: -15.2}
+  m_LocalPosition: {x: 45.2, y: 2, z: -15.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1448731896}
-  m_RootOrder: 7
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &243872019
 MonoBehaviour:
@@ -6735,8 +6555,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -6959,120 +6779,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d94efd3b48d3d7241bc9d6f8851d747e, type: 3}
---- !u!1 &294100729
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 294100730}
-  - component: {fileID: 294100731}
-  m_Layer: 0
-  m_Name: Chicken
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &294100730
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294100729}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.62, y: 0, z: 10.4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2001356031}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294100731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294100729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
---- !u!1 &296784715
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 296784716}
-  - component: {fileID: 296784717}
-  m_Layer: 0
-  m_Name: Chicken (31)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &296784716
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 296784715}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -33.1, y: 3.4, z: -22.3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1448731896}
-  m_RootOrder: 40
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &296784717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 296784715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
 --- !u!1 &296957089
 GameObject:
   m_ObjectHideFlags: 0
@@ -7098,7 +6804,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 296957089}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -34.68, y: 0, z: -2.14}
+  m_LocalPosition: {x: -34.68, y: 2, z: -11.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1932480398}
@@ -7123,8 +6829,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -7278,63 +6984,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &340792951
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 340792952}
-  - component: {fileID: 340792953}
-  m_Layer: 0
-  m_Name: BoyfriendOne (11)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &340792952
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 340792951}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 42.7, y: 0, z: -11.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 152432367}
-  m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &340792953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 340792951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: 74d11a214cae852448344c06f83b3f48, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 0
-  RandomizeHeightMin: 0
-  RandomizeHeightMax: 0
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
 --- !u!1001 &343857130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7349,6 +6998,10 @@ PrefabInstance:
     - target: {fileID: 967902689570981358, guid: e16c52d76cc85f04fbf3ee2573e55736, type: 3}
       propertyPath: Relic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437790733390186842, guid: e16c52d76cc85f04fbf3ee2573e55736, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3223006816514086547, guid: e16c52d76cc85f04fbf3ee2573e55736, type: 3}
       propertyPath: m_Size.x
@@ -7409,6 +7062,10 @@ PrefabInstance:
     - target: {fileID: 3223006816514086549, guid: e16c52d76cc85f04fbf3ee2573e55736, type: 3}
       propertyPath: m_Name
       value: EndScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 3223006816514086549, guid: e16c52d76cc85f04fbf3ee2573e55736, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e16c52d76cc85f04fbf3ee2573e55736, type: 3}
@@ -12348,63 +12005,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!1 &379704344
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 379704345}
-  - component: {fileID: 379704346}
-  m_Layer: 0
-  m_Name: Chicken (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &379704345
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 379704344}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -48.6, y: 0, z: 4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 152432367}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &379704346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 379704344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
 --- !u!1 &384497894
 GameObject:
   m_ObjectHideFlags: 0
@@ -12497,7 +12097,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1448731896}
-  m_RootOrder: 21
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &388598055
 MonoBehaviour:
@@ -12704,7 +12304,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1448731896}
-  m_RootOrder: 30
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &419241640
 MonoBehaviour:
@@ -12757,7 +12357,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423016601}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.62, y: 0, z: 10.4}
+  m_LocalPosition: {x: 21.2, y: 2, z: 10.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1932480398}
@@ -12782,8 +12382,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -12823,7 +12423,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1448731896}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &432754103
 MonoBehaviour:
@@ -12876,11 +12476,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 435926478}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -31.8, y: 3.4, z: 2.6}
+  m_LocalPosition: {x: -31.8, y: 2, z: 2.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1448731896}
-  m_RootOrder: 33
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &435926480
 MonoBehaviour:
@@ -12901,8 +12501,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -13143,7 +12743,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 721353149}
-  m_RootOrder: 12
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &479826857
 MonoBehaviour:
@@ -13435,11 +13035,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 500589861}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 43.18, y: 0, z: -17.4}
+  m_LocalPosition: {x: 43.18, y: 2, z: -14.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2001356031}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &500589863
 MonoBehaviour:
@@ -13460,8 +13060,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -13501,12 +13101,8 @@ Transform:
   - {fileID: 685963859}
   - {fileID: 1679918847}
   - {fileID: 1216080451}
-  - {fileID: 902551243}
-  - {fileID: 1719396749}
   - {fileID: 775137517}
-  - {fileID: 575471332}
   - {fileID: 1202080050}
-  - {fileID: 1150957146}
   - {fileID: 43464420}
   m_Father: {fileID: 1839208532}
   m_RootOrder: 1
@@ -13598,11 +13194,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514168041}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.42, y: 0, z: -26.6}
+  m_LocalPosition: {x: 25.42, y: 2, z: -23.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2001356031}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &514168043
 MonoBehaviour:
@@ -13623,8 +13219,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -13655,11 +13251,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 517437122}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.9, y: 0, z: 5.0000005}
+  m_LocalPosition: {x: 31.5, y: 0, z: 6.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1448731896}
-  m_RootOrder: 25
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &517437124
 MonoBehaviour:
@@ -13938,7 +13534,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 10441728}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &558976981
 MonoBehaviour:
@@ -13991,11 +13587,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561220877}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27.1, y: 0, z: -26.1}
+  m_LocalPosition: {x: 27.1, y: 2, z: -26.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1448731896}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &561220879
 MonoBehaviour:
@@ -14016,8 +13612,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -14127,63 +13723,6 @@ MonoBehaviour:
   ObjectsToActivate:
   - {fileID: 1343897005}
   OverideEndingSpawner: {fileID: 0}
---- !u!1 &575471331
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 575471332}
-  - component: {fileID: 575471333}
-  m_Layer: 0
-  m_Name: BoyfriendOne (12)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &575471332
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 575471331}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 0, z: -30.4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 509483989}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &575471333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 575471331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: 74d11a214cae852448344c06f83b3f48, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 0
-  RandomizeHeightMin: 0
-  RandomizeHeightMax: 0
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 3
-  waveTimer: 6
-  totalWaves: 100000
 --- !u!1 &604700702
 GameObject:
   m_ObjectHideFlags: 0
@@ -14209,11 +13748,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604700702}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 36.9, y: 0, z: -21}
+  m_LocalPosition: {x: 36.9, y: 2, z: -21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 152432367}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &604700704
 MonoBehaviour:
@@ -14234,8 +13773,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -14323,11 +13862,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615402566}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.29, y: 0, z: 14.07}
+  m_LocalPosition: {x: -12.29, y: 2, z: 14.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2001356031}
-  m_RootOrder: 9
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &615402568
 MonoBehaviour:
@@ -14348,70 +13887,13 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
   waveTimer: 30
   totalWaves: 1
---- !u!1 &617598266
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 617598267}
-  - component: {fileID: 617598268}
-  m_Layer: 0
-  m_Name: Chicken (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &617598267
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 617598266}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44.9, y: 0, z: -13.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 10441728}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &617598268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 617598266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 3
-  waveTimer: 4.5
-  totalWaves: 100000
 --- !u!1 &650536938
 GameObject:
   m_ObjectHideFlags: 0
@@ -14441,7 +13923,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 152432367}
-  m_RootOrder: 12
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &650536940
 MonoBehaviour:
@@ -19394,11 +18876,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702663866}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -48.6, y: 0, z: -10.9}
+  m_LocalPosition: {x: -48.6, y: 2, z: -10.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1448731896}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &702663868
 MonoBehaviour:
@@ -19419,8 +18901,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -19455,22 +18937,15 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1792382582}
-  - {fileID: 19110923}
   - {fileID: 1305182710}
   - {fileID: 832502032}
-  - {fileID: 1808571363}
   - {fileID: 1057624128}
-  - {fileID: 1354145800}
-  - {fileID: 1947997232}
-  - {fileID: 2093486889}
   - {fileID: 161095350}
-  - {fileID: 1530496286}
   - {fileID: 1112462775}
   - {fileID: 479826856}
   - {fileID: 2104794509}
   - {fileID: 1996095841}
   - {fileID: 883516505}
-  - {fileID: 169805217}
   m_Father: {fileID: 2122984361}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19494,63 +18969,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6538034750878011676, guid: 0bdc89b974fa8414cb2506a0a01cbf15, type: 3}
   m_PrefabInstance: {fileID: 866738658911368536}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &742562184
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 742562185}
-  - component: {fileID: 742562186}
-  m_Layer: 0
-  m_Name: BoyfriendOne (9)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &742562185
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 742562184}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.3, y: 0, z: -22.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 152432367}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &742562186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 742562184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: 74d11a214cae852448344c06f83b3f48, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 0
-  RandomizeHeightMin: 0
-  RandomizeHeightMax: 0
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
 --- !u!1 &775137516
 GameObject:
   m_ObjectHideFlags: 0
@@ -19580,7 +18998,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 509483989}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &775137518
 MonoBehaviour:
@@ -19742,7 +19160,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 152432367}
-  m_RootOrder: 22
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &788392233
 MonoBehaviour:
@@ -19765,63 +19183,6 @@ MonoBehaviour:
   RandomizeHeight: 0
   RandomizeHeightMin: 0
   RandomizeHeightMax: 0
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
---- !u!1 &805839380
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 805839381}
-  - component: {fileID: 805839382}
-  m_Layer: 0
-  m_Name: SpawnPoint (15)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &805839381
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 805839380}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.12, y: 0, z: -6.9700003}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2001356031}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &805839382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 805839380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -29476,11 +28837,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832502031}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -34.7, y: 0, z: 1.1}
+  m_LocalPosition: {x: -45.8, y: 0, z: 1.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 721353149}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &832502033
 MonoBehaviour:
@@ -29595,11 +28956,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 846026628}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.5, y: 0, z: -26.4}
+  m_LocalPosition: {x: -26.5, y: 2, z: -26.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1448731896}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &846026630
 MonoBehaviour:
@@ -29620,8 +28981,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -29656,7 +29017,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 10441728}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &853081939
 MonoBehaviour:
@@ -29775,7 +29136,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 721353149}
-  m_RootOrder: 15
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &883516506
 MonoBehaviour:
@@ -29828,11 +29189,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889232799}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.2, y: 3.4, z: 16.3}
+  m_LocalPosition: {x: 19.2, y: 2, z: 16.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 152432367}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &889232801
 MonoBehaviour:
@@ -29853,70 +29214,13 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
   waveTimer: 30
   totalWaves: 1
---- !u!1 &902551242
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 902551243}
-  - component: {fileID: 902551244}
-  m_Layer: 0
-  m_Name: BoyfriendOne (9)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &902551243
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 902551242}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.7, y: 0, z: -23.3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 509483989}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &902551244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 902551242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: 74d11a214cae852448344c06f83b3f48, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 0
-  RandomizeHeightMin: 0
-  RandomizeHeightMax: 0
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 3
-  waveTimer: 6
-  totalWaves: 100000
 --- !u!1001 &930658136
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30088,63 +29392,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d94efd3b48d3d7241bc9d6f8851d747e, type: 3}
---- !u!1 &979840674
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 979840675}
-  - component: {fileID: 979840676}
-  m_Layer: 0
-  m_Name: BoyfriendOne (12)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &979840675
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 979840674}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 42.7, y: 0, z: -3.3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1448731896}
-  m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &979840676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 979840674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: 74d11a214cae852448344c06f83b3f48, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 0
-  RandomizeHeightMin: 0
-  RandomizeHeightMax: 0
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
 --- !u!1 &980240633
 GameObject:
   m_ObjectHideFlags: 0
@@ -30174,7 +29421,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1448731896}
-  m_RootOrder: 28
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &980240635
 MonoBehaviour:
@@ -30247,7 +29494,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1448731896}
-  m_RootOrder: 23
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1009364243
 MonoBehaviour:
@@ -30300,11 +29547,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018680608}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.9, y: 0, z: -23.3}
+  m_LocalPosition: {x: -32.9, y: 2, z: -23.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2001356031}
-  m_RootOrder: 23
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1018680610
 MonoBehaviour:
@@ -30325,8 +29572,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -30557,11 +29804,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039358530}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 43.18, y: 0, z: 3.159999}
+  m_LocalPosition: {x: 39.7, y: 2, z: 9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2001356031}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1039358532
 MonoBehaviour:
@@ -30582,65 +29829,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
---- !u!1 &1049097597
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1049097598}
-  - component: {fileID: 1049097599}
-  m_Layer: 0
-  m_Name: SpawnPoint (24)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1049097598
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049097597}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.8, y: 0, z: -17.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2001356031}
-  m_RootOrder: 24
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1049097599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049097597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -30680,7 +29870,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 10441728}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1052692847
 MonoBehaviour:
@@ -30742,7 +29932,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 721353149}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1057624129
 MonoBehaviour:
@@ -31317,11 +30507,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1087497457}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 38.6, y: 3.4, z: -11.3}
+  m_LocalPosition: {x: 38.6, y: 2, z: -11.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1448731896}
-  m_RootOrder: 38
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1087497459
 MonoBehaviour:
@@ -31342,8 +30532,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -31536,7 +30726,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1448731896}
-  m_RootOrder: 14
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1107365573
 MonoBehaviour:
@@ -31559,63 +30749,6 @@ MonoBehaviour:
   RandomizeHeight: 0
   RandomizeHeightMin: 0
   RandomizeHeightMax: 0
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
---- !u!1 &1108584789
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1108584790}
-  - component: {fileID: 1108584791}
-  m_Layer: 0
-  m_Name: Chicken (27)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1108584790
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1108584789}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.7, y: 3.4, z: -28.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1448731896}
-  m_RootOrder: 41
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1108584791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1108584789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -31650,7 +30783,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 721353149}
-  m_RootOrder: 11
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1112462776
 MonoBehaviour:
@@ -36515,11 +35648,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1118373524}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -39.5, y: 0, z: -19.6}
+  m_LocalPosition: {x: -39.5, y: 2, z: -19.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 152432367}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1118373526
 MonoBehaviour:
@@ -36540,189 +35673,18 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
   waveTimer: 30
   totalWaves: 1
---- !u!1 &1143323135
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1143323136}
-  - component: {fileID: 1143323137}
-  m_Layer: 0
-  m_Name: BoyfriendOne (38)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1143323136
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1143323135}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8, y: 0, z: 15.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1448731896}
-  m_RootOrder: 27
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1143323137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1143323135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: 74d11a214cae852448344c06f83b3f48, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 0
-  RandomizeHeightMin: 0
-  RandomizeHeightMax: 0
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
---- !u!1 &1150957145
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1150957146}
-  - component: {fileID: 1150957147}
-  m_Layer: 0
-  m_Name: BoyfriendOne (14)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1150957146
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1150957145}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.6, y: 0, z: -14.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 509483989}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1150957147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1150957145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: 74d11a214cae852448344c06f83b3f48, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 0
-  RandomizeHeightMin: 0
-  RandomizeHeightMax: 0
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 3
-  waveTimer: 6
-  totalWaves: 100000
 --- !u!4 &1170500658 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6538034750878011676, guid: 0bdc89b974fa8414cb2506a0a01cbf15, type: 3}
   m_PrefabInstance: {fileID: 60211372}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1175944141
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1175944142}
-  - component: {fileID: 1175944143}
-  m_Layer: 0
-  m_Name: Chicken (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1175944142
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1175944141}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -48.6, y: 0, z: 4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1448731896}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1175944143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1175944141}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
 --- !u!1 &1188462911
 GameObject:
   m_ObjectHideFlags: 0
@@ -36752,7 +35714,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 10441728}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1188462913
 MonoBehaviour:
@@ -36805,11 +35767,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202080049}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25.2, y: 0, z: -14.2}
+  m_LocalPosition: {x: 1.8, y: 0, z: -29.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 509483989}
-  m_RootOrder: 11
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1202080051
 MonoBehaviour:
@@ -36866,7 +35828,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5d7b1c19d46aaac47b9b295054790af4, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.23
+  m_Volume: 0.12
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -37052,11 +36014,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1208362972}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.36, y: 0, z: -19.8}
+  m_LocalPosition: {x: 8.9, y: 2, z: -19.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2001356031}
-  m_RootOrder: 14
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1208362974
 MonoBehaviour:
@@ -37077,8 +36039,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -37170,7 +36132,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 152432367}
-  m_RootOrder: 13
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1218870731
 MonoBehaviour:
@@ -37179,63 +36141,6 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1218870729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: 74d11a214cae852448344c06f83b3f48, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 0
-  RandomizeHeightMin: 0
-  RandomizeHeightMax: 0
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
---- !u!1 &1228278254
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1228278255}
-  - component: {fileID: 1228278256}
-  m_Layer: 0
-  m_Name: BoyfriendOne (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1228278255
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1228278254}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.9, y: 0, z: 11.4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 152432367}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1228278256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1228278254}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
@@ -37406,11 +36311,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1283462997}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35.51, y: 0, z: 0}
+  m_LocalPosition: {x: 44.1, y: 2, z: -4.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2001356031}
-  m_RootOrder: 18
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1283462999
 MonoBehaviour:
@@ -37431,8 +36336,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -37467,7 +36372,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 721353149}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1305182711
 MonoBehaviour:
@@ -37524,7 +36429,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 10441728}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1325787544
 MonoBehaviour:
@@ -37557,63 +36462,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 426280, guid: 137fcb79d327fa94d9002528b09387cd, type: 3}
   m_PrefabInstance: {fileID: 1101594978}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1335028035
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1335028036}
-  - component: {fileID: 1335028037}
-  m_Layer: 0
-  m_Name: SpawnPoint (12)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1335028036
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1335028035}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -37.86, y: 0, z: -13.809999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2001356031}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1335028037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1335028035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
 --- !u!1 &1343897005
 GameObject:
   m_ObjectHideFlags: 0
@@ -37682,120 +36530,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6538034750878011676, guid: 0bdc89b974fa8414cb2506a0a01cbf15, type: 3}
   m_PrefabInstance: {fileID: 337496507}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1347743989
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1347743990}
-  - component: {fileID: 1347743991}
-  m_Layer: 0
-  m_Name: SpawnPoint (19)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1347743990
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1347743989}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.29, y: 0, z: -10.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2001356031}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1347743991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1347743989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
---- !u!1 &1354145799
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1354145800}
-  - component: {fileID: 1354145801}
-  m_Layer: 0
-  m_Name: SpawnPoint (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1354145800
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1354145799}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -31.6, y: 0, z: -17.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 721353149}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1354145801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1354145799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: 74d11a214cae852448344c06f83b3f48, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 0
-  RandomizeHeightMin: 0
-  RandomizeHeightMax: 0
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
 --- !u!1 &1366027940
 GameObject:
   m_ObjectHideFlags: 0
@@ -37821,11 +36555,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366027940}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.29, y: 0, z: -1.8500011}
+  m_LocalPosition: {x: -32.7, y: 2, z: -8.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2001356031}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1366027942
 MonoBehaviour:
@@ -37846,179 +36580,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
---- !u!1 &1368568070
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1368568071}
-  - component: {fileID: 1368568072}
-  m_Layer: 0
-  m_Name: Chicken (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1368568071
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1368568070}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.9, y: 0, z: -28.8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1448731896}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1368568072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1368568070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
---- !u!1 &1390075666
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1390075667}
-  - component: {fileID: 1390075668}
-  m_Layer: 0
-  m_Name: Chicken (22)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1390075667
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390075666}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23.3, y: 3.4, z: 16.3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1448731896}
-  m_RootOrder: 35
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1390075668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390075666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
---- !u!1 &1397582484
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1397582485}
-  - component: {fileID: 1397582486}
-  m_Layer: 0
-  m_Name: Chicken
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1397582485
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1397582484}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35.8, y: 0, z: 10.4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1448731896}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1397582486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1397582484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -38053,7 +36616,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1448731896}
-  m_RootOrder: 19
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1399666109
 MonoBehaviour:
@@ -38106,7 +36669,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406987738}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22.33, y: 0, z: 10.4}
+  m_LocalPosition: {x: -22.33, y: 2, z: 10.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1932480398}
@@ -38131,8 +36694,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -38195,63 +36758,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01cb01c3beb57ff42a5b88a546d81aa6, type: 3}
---- !u!1 &1432958542
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1432958543}
-  - component: {fileID: 1432958544}
-  m_Layer: 0
-  m_Name: SpawnPoint (13)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1432958543
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432958542}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.45, y: 0, z: -25.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2001356031}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1432958544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432958542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
 --- !u!1 &1448731895
 GameObject:
   m_ObjectHideFlags: 0
@@ -38280,48 +36786,32 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1397582485}
-  - {fileID: 1175944142}
   - {fileID: 702663867}
   - {fileID: 846026629}
-  - {fileID: 1368568071}
   - {fileID: 561220878}
-  - {fileID: 1648681096}
   - {fileID: 243872018}
   - {fileID: 1935598672}
   - {fileID: 1642037106}
-  - {fileID: 60666711}
   - {fileID: 83047234}
-  - {fileID: 1834841118}
+  - {fileID: 435926479}
+  - {fileID: 107549688}
+  - {fileID: 228744533}
+  - {fileID: 1087497458}
   - {fileID: 432754102}
   - {fileID: 1107365572}
   - {fileID: 2092136646}
   - {fileID: 2130640535}
-  - {fileID: 1687904922}
-  - {fileID: 979840675}
   - {fileID: 1399666108}
   - {fileID: 1630894549}
   - {fileID: 388598054}
-  - {fileID: 1721840894}
   - {fileID: 1009364242}
   - {fileID: 1923701151}
   - {fileID: 517437123}
   - {fileID: 1770844392}
-  - {fileID: 1143323136}
   - {fileID: 980240634}
   - {fileID: 1893446368}
   - {fileID: 419241639}
   - {fileID: 187641178}
-  - {fileID: 2023678263}
-  - {fileID: 435926479}
-  - {fileID: 1516622450}
-  - {fileID: 1390075667}
-  - {fileID: 107549688}
-  - {fileID: 228744533}
-  - {fileID: 1087497458}
-  - {fileID: 1965476588}
-  - {fileID: 296784716}
-  - {fileID: 1108584790}
   m_Father: {fileID: 1026324532}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -38337,7 +36827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0ed105dcab49f4ea26717b9be5c9f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextSpawnManager: {fileID: 0}
+  NextSpawnManager: {fileID: 531145289}
   ObjectsToActivate:
   - {fileID: 1256840575}
   OverideEndingSpawner: {fileID: 0}
@@ -38427,7 +36917,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 10441728}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1451479529
 MonoBehaviour:
@@ -38512,63 +37002,6 @@ MonoBehaviour:
   RandomizeHeight: 0
   RandomizeHeightMin: 0
   RandomizeHeightMax: 0
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
---- !u!1 &1473590928
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1473590929}
-  - component: {fileID: 1473590930}
-  m_Layer: 0
-  m_Name: SpawnPoint (20)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1473590929
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1473590928}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35.9, y: 0, z: 4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2001356031}
-  m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1473590930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1473590928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -38694,63 +37127,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 0.96, z: 0.85}
   m_Center: {x: 0, y: 0, z: 0.06}
---- !u!1 &1516622449
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1516622450}
-  - component: {fileID: 1516622451}
-  m_Layer: 0
-  m_Name: BoyfriendOne (46)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1516622450
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1516622449}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.7, y: 0, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1448731896}
-  m_RootOrder: 34
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1516622451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1516622449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: 74d11a214cae852448344c06f83b3f48, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 0
-  RandomizeHeightMin: 0
-  RandomizeHeightMax: 0
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
 --- !u!1001 &1519718133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38792,63 +37168,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e562e27aa7f96e044988c2c0b3987060, type: 3}
---- !u!1 &1530496285
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1530496286}
-  - component: {fileID: 1530496287}
-  m_Layer: 0
-  m_Name: SpawnPoint (10)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1530496286
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1530496285}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.6, y: 0, z: -20.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 721353149}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1530496287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1530496285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: 74d11a214cae852448344c06f83b3f48, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 0
-  RandomizeHeightMin: 0
-  RandomizeHeightMax: 0
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
 --- !u!1001 &1584538508
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39011,63 +37330,6 @@ MonoBehaviour:
   spawnType: 3
   waveTimer: 4.5
   totalWaves: 100000
---- !u!1 &1629764351
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1629764352}
-  - component: {fileID: 1629764353}
-  m_Layer: 0
-  m_Name: Chicken (8)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1629764352
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629764351}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27.1, y: 0, z: -26.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 152432367}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1629764353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629764351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
 --- !u!1 &1630894548
 GameObject:
   m_ObjectHideFlags: 0
@@ -39097,7 +37359,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1448731896}
-  m_RootOrder: 20
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1630894550
 MonoBehaviour:
@@ -39150,11 +37412,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1642037105}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.3, y: 3.4, z: 16.3}
+  m_LocalPosition: {x: 29.3, y: 2, z: 16.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1448731896}
-  m_RootOrder: 9
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1642037107
 MonoBehaviour:
@@ -39175,70 +37437,13 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
   waveTimer: 30
   totalWaves: 1
---- !u!1 &1645439390
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1645439391}
-  - component: {fileID: 1645439392}
-  m_Layer: 0
-  m_Name: Chicken (12)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1645439391
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1645439390}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.7, y: 0, z: -16.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 10441728}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1645439392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1645439390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 3
-  waveTimer: 4.5
-  totalWaves: 100000
 --- !u!1001 &1646477037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39296,63 +37501,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01cb01c3beb57ff42a5b88a546d81aa6, type: 3}
---- !u!1 &1648681095
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1648681096}
-  - component: {fileID: 1648681097}
-  m_Layer: 0
-  m_Name: Chicken (9)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1648681096
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1648681095}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 36.9, y: 0, z: -21}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1448731896}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1648681097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1648681095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
 --- !u!1 &1664922802
 GameObject:
   m_ObjectHideFlags: 0
@@ -44220,63 +42368,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1666728399
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1666728400}
-  - component: {fileID: 1666728401}
-  m_Layer: 0
-  m_Name: SpawnPoint (16)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1666728400
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666728399}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.12, y: 0, z: 6.54}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2001356031}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1666728401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666728399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
 --- !u!1 &1668752489
 GameObject:
   m_ObjectHideFlags: 0
@@ -44397,125 +42488,11 @@ MonoBehaviour:
   spawnType: 3
   waveTimer: 6
   totalWaves: 100000
---- !u!1 &1687904921
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1687904922}
-  - component: {fileID: 1687904923}
-  m_Layer: 0
-  m_Name: BoyfriendOne (8)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1687904922
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687904921}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.9, y: 0, z: -24.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1448731896}
-  m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1687904923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687904921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: 74d11a214cae852448344c06f83b3f48, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 0
-  RandomizeHeightMin: 0
-  RandomizeHeightMax: 0
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
 --- !u!1 &1688273787 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1104661041145541319, guid: d7074ebb6be436642927768100c661e6, type: 3}
   m_PrefabInstance: {fileID: 172909825}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1700723621
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1700723622}
-  - component: {fileID: 1700723623}
-  m_Layer: 0
-  m_Name: SpawnPoint (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1700723622
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1700723621}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22.72, y: 0, z: 10.689999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2001356031}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1700723623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1700723621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
 --- !u!1 &1704136875
 GameObject:
   m_ObjectHideFlags: 0
@@ -44589,11 +42566,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707096011}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.9, y: 0, z: -28.8}
+  m_LocalPosition: {x: 2.9, y: 2, z: -28.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 152432367}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1707096013
 MonoBehaviour:
@@ -44614,179 +42591,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
---- !u!1 &1719396748
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1719396749}
-  - component: {fileID: 1719396750}
-  m_Layer: 0
-  m_Name: BoyfriendOne (10)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1719396749
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1719396748}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9, y: 0, z: -14.8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 509483989}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1719396750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1719396748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: 74d11a214cae852448344c06f83b3f48, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 0
-  RandomizeHeightMin: 0
-  RandomizeHeightMax: 0
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 3
-  waveTimer: 6
-  totalWaves: 100000
---- !u!1 &1721840893
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1721840894}
-  - component: {fileID: 1721840895}
-  m_Layer: 0
-  m_Name: BoyfriendOne (23)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1721840894
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1721840893}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -33.700005, y: 0, z: 11.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1448731896}
-  m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1721840895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1721840893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: 74d11a214cae852448344c06f83b3f48, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 0
-  RandomizeHeightMin: 0
-  RandomizeHeightMax: 0
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
---- !u!1 &1722915076
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1722915077}
-  - component: {fileID: 1722915078}
-  m_Layer: 0
-  m_Name: SpawnPoint (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1722915077
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1722915076}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3, y: 0, z: -14.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2001356031}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1722915078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1722915076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -44849,63 +42655,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 028be5f0dc01e82469ed01c2804b1178, type: 3}
---- !u!1 &1750818942
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1750818943}
-  - component: {fileID: 1750818944}
-  m_Layer: 0
-  m_Name: SpawnPoint (22)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1750818943
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1750818942}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.3, y: 0, z: 13.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2001356031}
-  m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1750818944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1750818942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
 --- !u!1 &1753354308
 GameObject:
   m_ObjectHideFlags: 0
@@ -44988,7 +42737,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1755077842}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.69, y: 8, z: -18.49}
+  m_LocalPosition: {x: -2.69, y: 8, z: -12.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1839208532}
@@ -45045,11 +42794,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1770844391}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.5999975, y: 0, z: 15.5}
+  m_LocalPosition: {x: 7.4, y: 0, z: 15.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1448731896}
-  m_RootOrder: 26
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1770844393
 MonoBehaviour:
@@ -45115,63 +42864,6 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1792382581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: 74d11a214cae852448344c06f83b3f48, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 0
-  RandomizeHeightMin: 0
-  RandomizeHeightMax: 0
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
---- !u!1 &1808571362
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1808571363}
-  - component: {fileID: 1808571364}
-  m_Layer: 0
-  m_Name: SpawnPoint (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1808571363
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1808571362}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.43, y: 0, z: 12.36}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 721353149}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1808571364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1808571362}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
@@ -45317,63 +43009,6 @@ Transform:
   m_Father: {fileID: 1666529130}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1834841117
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1834841118}
-  - component: {fileID: 1834841119}
-  m_Layer: 0
-  m_Name: Chicken (19)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1834841118
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1834841117}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25.9, y: 3.4, z: 14.8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1448731896}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1834841119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1834841117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
 --- !u!1 &1837454346
 GameObject:
   m_ObjectHideFlags: 0
@@ -50235,63 +47870,6 @@ MonoBehaviour:
   NextSpawnManager: {fileID: 28468650}
   ObjectsToActivate: []
   OverideEndingSpawner: {fileID: 1755077844}
---- !u!1 &1844503037
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1844503038}
-  - component: {fileID: 1844503039}
-  m_Layer: 0
-  m_Name: Chicken (13)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1844503038
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1844503037}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 38.7, y: 3.4, z: 9.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 152432367}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1844503039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1844503037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
 --- !u!1 &1859380947
 GameObject:
   m_ObjectHideFlags: 0
@@ -50317,11 +47895,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859380947}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.6, y: 0, z: -10.2}
+  m_LocalPosition: {x: 41.6, y: 0, z: -14.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 10441728}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1859380949
 MonoBehaviour:
@@ -50374,7 +47952,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1873353307}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.74, y: 0, z: -23.47}
+  m_LocalPosition: {x: -5.74, y: 2, z: -23.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1932480398}
@@ -50399,8 +47977,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -50527,7 +48105,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1448731896}
-  m_RootOrder: 29
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1893446369
 MonoBehaviour:
@@ -50610,7 +48188,7 @@ MonoBehaviour:
   totalEnemy: 1
   Spawn: 0
   spawnType: 3
-  waveTimer: 6
+  waveTimer: 5
   totalWaves: 100000
 --- !u!1 &1896097729
 GameObject:
@@ -50641,7 +48219,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 152432367}
-  m_RootOrder: 20
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1896097731
 MonoBehaviour:
@@ -50694,11 +48272,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1900833578}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.3, y: 0, z: -0.6}
+  m_LocalPosition: {x: 46.3, y: 0, z: 1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 10441728}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1900833580
 MonoBehaviour:
@@ -50984,11 +48562,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1916164823}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -46.35, y: 0, z: 1.53}
+  m_LocalPosition: {x: -46.35, y: 2, z: 1.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2001356031}
-  m_RootOrder: 11
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1916164825
 MonoBehaviour:
@@ -51009,8 +48587,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -51306,7 +48884,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1448731896}
-  m_RootOrder: 24
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1923701152
 MonoBehaviour:
@@ -51359,11 +48937,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925346940}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.800001, y: 0, z: -17.19}
+  m_LocalPosition: {x: -17.800001, y: 2, z: -17.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2001356031}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1925346942
 MonoBehaviour:
@@ -51384,8 +48962,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -51467,11 +49045,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1935598671}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 45.2, y: 3.4, z: 3.1}
+  m_LocalPosition: {x: 45.2, y: 2, z: 3.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1448731896}
-  m_RootOrder: 8
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1935598673
 MonoBehaviour:
@@ -51492,8 +49070,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -51524,11 +49102,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1936432746}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.7, y: 0, z: -26.5}
+  m_LocalPosition: {x: -5.7, y: 2, z: -26.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2001356031}
-  m_RootOrder: 21
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1936432748
 MonoBehaviour:
@@ -51549,8 +49127,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -51585,7 +49163,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 152432367}
-  m_RootOrder: 17
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1937586678
 MonoBehaviour:
@@ -51638,7 +49216,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941402140}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35.8, y: 0, z: 10.4}
+  m_LocalPosition: {x: -35.8, y: 2, z: 10.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 152432367}
@@ -51663,65 +49241,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
---- !u!1 &1947997231
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1947997232}
-  - component: {fileID: 1947997233}
-  m_Layer: 0
-  m_Name: SpawnPoint (7)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1947997232
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1947997231}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.6, y: 0, z: 6.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 721353149}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1947997233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1947997231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: 74d11a214cae852448344c06f83b3f48, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 0
-  RandomizeHeightMin: 0
-  RandomizeHeightMax: 0
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -51791,63 +49312,6 @@ Transform:
   m_Father: {fileID: 1666529130}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1965476587
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1965476588}
-  - component: {fileID: 1965476589}
-  m_Layer: 0
-  m_Name: Chicken (26)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1965476588
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1965476587}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 38.6, y: 3.4, z: 9.4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1448731896}
-  m_RootOrder: 39
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1965476589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1965476587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
 --- !u!1 &1996095840
 GameObject:
   m_ObjectHideFlags: 0
@@ -51877,7 +49341,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 721353149}
-  m_RootOrder: 14
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1996095842
 MonoBehaviour:
@@ -51933,11 +49397,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 294100730}
-  - {fileID: 1700723622}
   - {fileID: 1366027941}
   - {fileID: 1925346941}
-  - {fileID: 1722915077}
   - {fileID: 514168042}
   - {fileID: 500589862}
   - {fileID: 1039358531}
@@ -51945,19 +49406,11 @@ Transform:
   - {fileID: 615402567}
   - {fileID: 80687417}
   - {fileID: 1916164824}
-  - {fileID: 1335028036}
-  - {fileID: 1432958543}
   - {fileID: 1208362973}
-  - {fileID: 805839381}
-  - {fileID: 1666728400}
   - {fileID: 220693096}
   - {fileID: 1283462998}
-  - {fileID: 1347743990}
-  - {fileID: 1473590929}
   - {fileID: 1936432747}
-  - {fileID: 1750818943}
   - {fileID: 1018680609}
-  - {fileID: 1049097598}
   m_Father: {fileID: 15585565}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -52001,11 +49454,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2010056784}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.9, y: 0, z: 20.8}
+  m_LocalPosition: {x: -13.9, y: 0, z: 17.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 152432367}
-  m_RootOrder: 21
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2010056786
 MonoBehaviour:
@@ -52067,7 +49520,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 152432367}
-  m_RootOrder: 14
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2015164227
 MonoBehaviour:
@@ -52090,63 +49543,6 @@ MonoBehaviour:
   RandomizeHeight: 0
   RandomizeHeightMin: 0
   RandomizeHeightMax: 0
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
---- !u!1 &2023678262
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2023678263}
-  - component: {fileID: 2023678264}
-  m_Layer: 0
-  m_Name: Chicken (20)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2023678263
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2023678262}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.3, y: 3.4, z: -14.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1448731896}
-  m_RootOrder: 32
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2023678264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2023678262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -52245,7 +49641,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2066819736}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23.6, y: 0, z: -9}
+  m_LocalPosition: {x: -25.9, y: 0, z: -13.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 10441728}
@@ -57171,11 +54567,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092136645}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.7, y: 0, z: -22.3}
+  m_LocalPosition: {x: -16.9, y: 0, z: -22.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1448731896}
-  m_RootOrder: 15
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2092136647
 MonoBehaviour:
@@ -57184,120 +54580,6 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092136645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: 74d11a214cae852448344c06f83b3f48, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 0
-  RandomizeHeightMin: 0
-  RandomizeHeightMax: 0
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
---- !u!1 &2092688552
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2092688553}
-  - component: {fileID: 2092688554}
-  m_Layer: 0
-  m_Name: Chicken (19)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2092688553
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2092688552}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25.9, y: 3.4, z: 14.8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 152432367}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2092688554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2092688552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  enemyLevel: 0
-  EasyEnemy: {fileID: 4967183720592907228, guid: dfc17c3f2065c974586feb53e61f4e66, type: 3}
-  MediumEnemy: {fileID: 0}
-  HardEnemy: {fileID: 0}
-  BossEnemy: {fileID: 0}
-  RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
-  totalEnemy: 1
-  Spawn: 0
-  spawnType: 2
-  waveTimer: 30
-  totalWaves: 1
---- !u!1 &2093486888
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2093486889}
-  - component: {fileID: 2093486890}
-  m_Layer: 0
-  m_Name: SpawnPoint (8)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2093486889
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2093486888}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.57, y: 0, z: 12.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 721353149}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2093486890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2093486888}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd5485aefe625ce4d9be46883b5b49e7, type: 3}
@@ -57342,11 +54624,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2103845785}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.9, y: 0, z: 16.57}
+  m_LocalPosition: {x: 28.9, y: 2, z: 16.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2001356031}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2103845787
 MonoBehaviour:
@@ -57367,8 +54649,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -57403,7 +54685,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 721353149}
-  m_RootOrder: 13
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2104794510
 MonoBehaviour:
@@ -57491,11 +54773,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2130640534}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.8, y: 0, z: -18.9}
+  m_LocalPosition: {x: -2.5, y: 0, z: -27.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1448731896}
-  m_RootOrder: 16
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2130640536
 MonoBehaviour:
@@ -57553,11 +54835,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136313831}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.5, y: 0, z: -26.4}
+  m_LocalPosition: {x: -26.5, y: 2, z: -26.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 152432367}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2136313833
 MonoBehaviour:
@@ -57578,8 +54860,8 @@ MonoBehaviour:
   HardEnemy: {fileID: 0}
   BossEnemy: {fileID: 0}
   RandomizeHeight: 1
-  RandomizeHeightMin: 10
-  RandomizeHeightMax: 20
+  RandomizeHeightMin: 8
+  RandomizeHeightMax: 15
   totalEnemy: 1
   Spawn: 0
   spawnType: 2
@@ -57649,6 +54931,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 757101311134134324, guid: 4d33ccb3d1e0c8641864941686c31ec0, type: 3}
+      propertyPath: m_Volume
+      value: 0.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 757101311937450714, guid: 4d33ccb3d1e0c8641864941686c31ec0, type: 3}
+      propertyPath: ejectPower
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 757101311937450714, guid: 4d33ccb3d1e0c8641864941686c31ec0, type: 3}
+      propertyPath: shotPower
+      value: 1500
+      objectReference: {fileID: 0}
     - target: {fileID: 1521561685074088296, guid: 4d33ccb3d1e0c8641864941686c31ec0, type: 3}
       propertyPath: m_Name
       value: Player
@@ -57659,7 +54953,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1521561685074088297, guid: 4d33ccb3d1e0c8641864941686c31ec0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.274
+      value: 0.91
       objectReference: {fileID: 0}
     - target: {fileID: 1521561685074088297, guid: 4d33ccb3d1e0c8641864941686c31ec0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -57697,10 +54991,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1521561685074088299, guid: 4d33ccb3d1e0c8641864941686c31ec0, type: 3}
+      propertyPath: moveSpeed
+      value: 3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521561685074088299, guid: 4d33ccb3d1e0c8641864941686c31ec0, type: 3}
+      propertyPath: jumpHeight
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521561685074088303, guid: 4d33ccb3d1e0c8641864941686c31ec0, type: 3}
+      propertyPath: m_Volume
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 1685407967949798304, guid: 4d33ccb3d1e0c8641864941686c31ec0, type: 3}
       propertyPath: DeathMenu
       value: 
       objectReference: {fileID: 548835944}
+    - target: {fileID: 1685407967949798304, guid: 4d33ccb3d1e0c8641864941686c31ec0, type: 3}
+      propertyPath: PlayerHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013568392651819270, guid: 4d33ccb3d1e0c8641864941686c31ec0, type: 3}
+      propertyPath: ejectPower
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013568392651819270, guid: 4d33ccb3d1e0c8641864941686c31ec0, type: 3}
+      propertyPath: shotPower
+      value: 1500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d33ccb3d1e0c8641864941686c31ec0, type: 3}
 --- !u!1001 &866738658911368536

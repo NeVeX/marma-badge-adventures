@@ -58,7 +58,7 @@ public class SpawnManager : MonoBehaviour
         {
             return;
         }
-        Debug.Log(gameObject.name + ": Activating all spawners");
+        Debug.Log(gameObject.name + ": Activating all ["+ _spawners.Length+ "] spawners");
         _alreadyActivated = true;
         _spawners.ToList().ForEach(sp => sp.enableTrigger(OnSpawnerCompleted));
         if(ObjectsToActivate != null)

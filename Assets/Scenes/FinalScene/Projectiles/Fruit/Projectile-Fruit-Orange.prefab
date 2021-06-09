@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3f69b810896414e95feef040b8c02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageAmount: 25
+  DamageAmount: 0
   IsInstantKill: 0
   IsEnemy: 0
 --- !u!65 &2334215612956555931
@@ -183,15 +183,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8327612371734813038, guid: 4206dcbcb25b04b7f8731ad3af21766e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.25
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 8327612371734813038, guid: 4206dcbcb25b04b7f8731ad3af21766e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.25
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 8327612371734813038, guid: 4206dcbcb25b04b7f8731ad3af21766e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.25
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4206dcbcb25b04b7f8731ad3af21766e, type: 3}

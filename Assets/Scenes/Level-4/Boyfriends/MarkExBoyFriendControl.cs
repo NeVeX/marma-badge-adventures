@@ -176,7 +176,7 @@ public class MarkExBoyFriendControl : MonoBehaviour
     private void OnSearchingForPlayer()
     {
         _shouldMove = true;
-        Debug.Log("ExBoyfriend can move");
+        //Debug.Log("ExBoyfriend can move");
         //_rigidbody.isKinematic = false;
         //_rigidbody.useGravity = true;
         //_rigidbody.velocity = Vector3.zero;

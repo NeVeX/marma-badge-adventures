@@ -19,7 +19,10 @@ public class MarkDoor : MonoBehaviour
     private void Start()
     {
         Animator = gameObject.transform.parent.GetComponent<Animator>();
-        ScreenMessageControl = MessagePanel.transform.parent.GetComponent<ScreenMessageControl>();
+        if (MessagePanel != null)
+        {
+            ScreenMessageControl = MessagePanel.transform.parent.GetComponent<ScreenMessageControl>();
+        }
         CharacterController = GameObjectWithCharacterController.GetComponent<CharacterController>();
         BlackDoor.SetActive(false);
         Time.timeScale = 1;
@@ -28,12 +31,13 @@ public class MarkDoor : MonoBehaviour
     void OnPlayerColliderHit()
     {
         Debug.Log("Player collision a door");
-        // Ask the question 
-        //if (Input.GetButtonDown("A Button")) // doesn't work
-        //{
-        ScreenMessageControl.ShowMessage(OnMessageAnswer);
-        //CharacterController.enabled = false; // disable the controller until question answered
-        //}
+        if (ScreenMessageControl != null)
+        {
+            ScreenMessageControl.ShowMessage(OnMessageAnswer);
+        } else
+        {
+            OpenDoor();
+        }
     }
 
     private void OnMessageAnswer(ScreenMessageControl.MessageAnswer messageAnswer)

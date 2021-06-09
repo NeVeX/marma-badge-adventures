@@ -12,13 +12,13 @@ public class MessageInABottleTrigger : MonoBehaviour
     [SerializeField] AudioClip recordScratch;
     [SerializeField] AudioClip messageInABottle;
     private bool isAlreadyVisible = false;
-    private MarkSceneManager _markSceneManager;
+    [SerializeField] MarkSceneManager MarkSceneManager;
 
     void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
         audioSource = GetComponent<AudioSource>();
-        _markSceneManager = GetComponent<MarkSceneManager>();
+        //_markSceneManager = GetComponent<MarkSceneManager>();
     }
 
     void Update()
@@ -37,7 +37,7 @@ public class MessageInABottleTrigger : MonoBehaviour
     private IEnumerator playMessageInABottle()
     {
         // Stop all other sources
-        _markSceneManager.StopAllAudio();
+        MarkSceneManager.StopAllAudio();
         // now play scratch record effect
         audioSource.loop = false;
         audioSource.PlayOneShot(recordScratch);

@@ -13,6 +13,7 @@ public class IntroScreenMessageControl : MonoBehaviour
 
     void Start()
     {
+        MarkStopWatch.Restart();
         _markSceneManager = GameObject.FindObjectOfType<MarkSceneManager>();
         int currentScene = _markSceneManager.GetCurrentSceneIndex();
         bool isInRestartedScene = _markSceneManager.IsInRestartedScene();
